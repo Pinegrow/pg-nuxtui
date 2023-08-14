@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json.schemastore.org/web-types",
+  "name": "project",
+  "framework": "vue",
+  "version": "0.0.0",
+  "contributions": {
+    "html": {
+      "elements": [
+        {
+          "name": "BaseButtonDemo",
+          "description": "Note, this is not a real component in this project, added here just to show an example of how it is defined in web-types.",
+          "attributes": [
+            {
+              "name": "label",
+              "placeholder": "My Button"
+            },
+            {
+              "name": "size",
+              "customType": "select",
+              "default": "sm",
+              "options": ["2xs", "xs", "sm", "md", "lg", "xl"]
+            },
+            {
+              "name": "variant",
+              "customType": "select",
+              "default": "solid",
+              "options": ["solid", "outline", "soft", "ghost", "link"]
+            },
+            {
+              "name": "target",
+              "customType": "select",
+              "default": "",
+              "options": ["_blank"]
+            }
+          ],
+          "slots": [
+            {
+              "name": "default",
+              "description": "The default Vue slot.",
+              "vue-properties": [
+                {
+                  "name": "disabled-demo",
+                  "description": "Whether or not the Button is disabled. Note, this is not a real slot prop, added here just to show an example of how it is defined in web-types.",
+                  "type": "Boolean"
+                }
+              ]
+            },
+            {
+              "name": "leading",
+              "description": "Use the #leading slot to set the content of the leading icon."
+            },
+            {
+              "name": "trailing",
+              "description": "Use the #trailing slot to set the content of the trailing icon."
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "name": "color",
+          "customType": "color",
+          "options": []
+        }
+      ]
+    }
+  }
+}

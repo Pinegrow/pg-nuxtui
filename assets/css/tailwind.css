@@ -1,0 +1,80 @@
+/* Pinegrow generated Design Panel Init Begin */
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,500,700|Inter:100,200,300,400,500,600,700,800,900&display=swap');
+
+/* Pinegrow generated Design Panel Init End */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-blue {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold md:text-5xl lg:text-6xl  tracking-tight;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4 scroll-mt-28;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold mb-2 scroll-mt-28;
+  }
+  h4 {
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold mb-2 scroll-mt-28;
+  }
+  h5 {
+    @apply text-base md:text-lg lg:text-xl font-medium mb-2 scroll-mt-28;
+  }
+  h6 {
+    @apply text-sm md:text-base lg:text-lg font-medium mb-2 scroll-mt-28;
+  }
+
+  input,
+  optgroup,
+  select,
+  textarea {
+    @apply text-black;
+  }
+}
+
+/* Pinegrow generated Design Panel Extra Rules Begin */
+
+.poster {
+  z-index: 0;
+}
+
+.poster:before {
+  background-image: url(https://images.unsplash.com/photo-1604671801908-6f0c6a092c05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDQxfHxzaG9lc3xlbnwwfHx8fDE2ODcxNjk3Njd8MA&ixlib=rb-4.0.3&q=80&w=1080) !important;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: ' ';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  filter: blur(0px);
+}
+
+body.poster:before {
+  position: fixed;
+}
+@media (min-width: 1440px),
+  (min-width: 992px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 992px) and (min-resolution: 192dpi) {
+  .poster:before {
+    background-image: url(https://images.unsplash.com/photo-1604671801908-6f0c6a092c05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDQxfHxzaG9lc3xlbnwwfHx8fDE2ODcxNjk3Njd8MA&ixlib=rb-4.0.3&q=80&w=2000) !important;
+  }
+}
+body,
+html {
+  min-height: 100vh;
+}
+
+/* Pinegrow generated Design Panel Extra Rules End */

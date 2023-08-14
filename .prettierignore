@@ -1,0 +1,20 @@
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+.DS_Store
+
+# Pinegrow
+_pgbackup
+_pginfo
+
+## optional
+pinegrow.json
+## add any d.ts files that are auto-generated, for eg,
+auto-imports.d.ts
+components.d.ts
+composables.d.ts
