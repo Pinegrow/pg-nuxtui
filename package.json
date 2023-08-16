@@ -20,10 +20,11 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.2.67",
-    "@nuxt/content": "^2.6.0",
+    "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/devtools": "^0.7.1",
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxthq/ui": "^2.7.0",
+    "@nuxtjs/html-validator": "^1.5.2",
     "@pinegrow/nuxt-module": "^3.0.13",
     "@pinegrow/nuxtui-plugin": "^3.0.15",
     "@pinegrow/tailwindcss-plugin": "^3.0.5",
