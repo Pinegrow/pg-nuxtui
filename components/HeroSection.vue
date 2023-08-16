@@ -40,6 +40,7 @@
                     :key="image"
                     :src="image"
                     size="xl"
+                    alt="avatar"
                   ></UAvatar>
                 </UAvatarGroup>
               </template>
