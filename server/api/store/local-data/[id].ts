@@ -1,4 +1,4 @@
-import { Product, Products } from '~/types/store'
+import { Product, Products } from '@/types/store'
 import products from './data'
 
 products as Products

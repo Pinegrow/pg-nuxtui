@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { checkDarkTheme } from '~/composables/dark-color-scheme-check'
+  import checkDarkTheme from '@/composables/dark-color-scheme-check?raw'
   import type { Script } from '@unhead/schema'
   type TurboScript = Script & { once: true }
 
