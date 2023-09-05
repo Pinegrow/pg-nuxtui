@@ -38,7 +38,7 @@
           ></UBadge>
           <div class="flex justify-center">
             <div class="-m-4 bg-white h-64 p-6 rounded-lg">
-              <img :src="image" class="max-h-full" />
+              <img class="max-h-full" :src="image" />
             </div>
           </div>
         </div>
