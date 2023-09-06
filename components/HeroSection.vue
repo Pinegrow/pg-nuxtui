@@ -36,8 +36,8 @@
               <template #default>
                 <UAvatarGroup :max="3" size="2xl">
                   <UAvatar
-                    v-for="image in avatarImages"
-                    :key="image"
+                    v-for="(image, index) in avatarImages"
+                    :key="index"
                     :src="image"
                     size="xl"
                     alt="avatar"
