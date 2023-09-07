@@ -10,9 +10,7 @@
 </script>
 <template>
   <main>
-    <HeroSection />
-    <AboutTemplate />
-    <WalkThrough />
+    <span>This is the index page - Nuxt with Nuxt UI. A fresh start!</span>
   </main>
 </template>
 <style scoped></style>
