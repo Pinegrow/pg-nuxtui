@@ -12,7 +12,7 @@
 </script>
 <template>
   <div class="w-full">
-    <nav class>
+    <nav>
       <div class="container mx-auto px-4 sm:px-6">
         <div class="flex h-24 items-center justify-between">
           <div class="flex items-center justify-between w-full">
@@ -32,7 +32,7 @@
             <NavBarMobileMenuButton
               v-if="mobileNavTabs.length"
               class="hidden sm:block"
-            ></NavBarMobileMenuButton>
+            />
             <NavBarMobileMenuButton v-if="navlinks.length" class="sm:hidden" />
             <NavBarMobileMenu
               class="hidden sm:flex sm:justify-end absolute right-0 mt-4"

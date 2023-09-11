@@ -34,7 +34,7 @@
   })
 </script>
 <template>
-  <div>
+  <div class="pb-16">
     <StoreHeader />
     <UContainer>
       <section class="flex items-center justify-center m-4">

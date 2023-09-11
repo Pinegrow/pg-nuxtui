@@ -1,6 +1,6 @@
 # eCommerce Store - Fullstack app with beautiful, accessible components from Nuxt UI library
 
-Nuxt 3 Full stack (SPA-SSR) quick start template that pre-includes the [Pinegrow Nuxt Module](https://www.npmjs.com/package/@pinegrow/nuxt-module), [Pinegrow Tailwind CSS Plugin](https://www.npmjs.com/package/@pinegrow/tailwindcss-plugin), [Nuxt UI](https://ui.nuxtlabs.com/getting-started) and other goodies for Vue Designer. This template uses the tailwind-based Nuxt UI component library and features an eCommerce store, where data is fetched via APIs server by server routes (Nitro-powered).
+Nuxt 3 Full stack (SPA-SSR) quick start template that pre-includes the [Pinegrow Nuxt Module](https://www.npmjs.com/package/@pinegrow/nuxt-module), [Pinegrow Tailwind CSS Plugin](https://www.npmjs.com/package/@pinegrow/tailwindcss-plugin), [Nuxt UI](https://ui.nuxt.com/getting-started) and other goodies for Vue Designer. This template uses the tailwind-based Nuxt UI component library and features an eCommerce store, where data is fetched via APIs server by server routes (Nitro-powered).
 
 Demo - https://pg-nuxtui.netlify.app/
 
@@ -77,7 +77,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 - [Tailwind CSS](https://tailwindcss.com/docs/guides/nuxtjs#3) - The amazing utility-first CSS framework.
 
-- [Nuxt UI](https://ui.nuxtlabs.com/getting-started) - Fully styled and customizable components for Nuxt. Under the hood:
+- [Nuxt UI](https://ui.nuxt.com/getting-started) - Fully styled and customizable components for Nuxt. Under the hood:
   - 🦾 **[HeadlessUI-Vue](https://headlessui.com/vue/menu)** - Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.
   - ⚡ **[VueUse](https://vueuse.org/)** - collection of essential Vue composition utilities.
   - 🔌 **[Nuxt Tailwind CSS Module](https://tailwindcss.nuxtjs.org/)** - This module helps you set up Tailwind CSS in your Nuxt application in seconds.
@@ -87,14 +87,14 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 ### Nuxt UI configuration
 
 - 👉 Nuxt UI uses heroicons by default and is configured only to use them. In order to use all iconsets in Vue Designer's icon-picker, the `ui` key of the Nuxt config has been updated (`icons: 'all'`).
-- Also, note that there are some scenarios when colors might have to be added to the `safelistColors` array under the `ui` key. For more details, refer to the official [documentation](https://ui.nuxtlabs.com/getting-started/theming#colors).
+- Also, note that there are some scenarios when colors might have to be added to the `safelistColors` array under the `ui` key. For more details, refer to the official [documentation](https://ui.nuxt.com/getting-started/theming#colors).
 
   ```ts
   // nuxt.config.ts
   export default defineNuxtConfig({
     modules: [
       '@pinegrow/nuxt-module',
-      '@nuxthq/ui',
+      '@nuxt/ui',
       //...
     ],
     pinegrow: {

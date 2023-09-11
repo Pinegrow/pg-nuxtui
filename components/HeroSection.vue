@@ -17,7 +17,7 @@
         class="pb-36 pt-2 px-6 relative rounded-3xl md:pb-48 lg:pb-72 lg:px-12"
       >
         <div
-          class="-mx-4 flex flex-wrap items-center justify-center lg:space-y-0 mt-24 space-y-6"
+          class="-mx-4 flex flex-wrap items-center justify-center mt-24 space-y-6 lg:space-y-0"
         >
           <div class="px-4 text-center w-full md:w-8/12 xl:w-6/12">
             <h4
