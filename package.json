@@ -26,7 +26,7 @@
     "@nuxt/ui": "^2.8.0",
     "@nuxtjs/html-validator": "^1.5.2",
     "@pinegrow/nuxt-module": "^3.0.13",
-    "@pinegrow/nuxtui-plugin": "^3.0.15",
+    "@pinegrow/nuxtui-plugin": "^3.0.21",
     "@pinegrow/tailwindcss-plugin": "^3.0.5",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
