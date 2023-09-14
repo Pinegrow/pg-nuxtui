@@ -28,17 +28,44 @@
 <template>
   <NuxtLayout>
     <div
-      class="flex flex-col gap-4 items-center justify-center my-12 text-center"
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        text-align: center;
+      "
     >
-      <div class="text-3xl">
+      <div style="font-size: 1.875rem; line-height: 2.25rem">
         {{ is404 ? 'This page could not be found' : 'An error occurred' }}
       </div>
-      <div class="text-xl opacity-50">
+      <div style="font-size: 1.25rem; line-height: 1.75rem opacity: 0.5;">
         Looks like you've followed a broken link or entered a URL that doesn't
         exist on this site.
       </div>
       <pre v-if="isDev">{{ error }}</pre>
-      <UButton label="< Go Back" size="lg" @click="handleError"></UButton>
+      <button
+        style="
+          background-color: gray;
+          padding-left: 12px;
+          padding-right: 12px;
+          padding-top: 6px;
+          padding-bottom: 6px;
+          font-size: 0.875rem !important;
+          line-height: 1.25rem !important;
+          font-weight: 500 !important;
+          line-height: 1.25rem;
+          letter-spacing: 0.0178571429em !important;
+          text-transform: none !important;
+          border-radius: 0.5rem !important;
+        "
+        @click="handleError"
+      >
+        &lt; Go Back
+      </button>
     </div>
   </NuxtLayout>
 </template>

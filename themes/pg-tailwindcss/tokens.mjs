@@ -225,4 +225,8 @@ const pg_backgrounds = {
 
 /* Pinegrow generated Design Panel End */
 
+/* eslint-disable */
+/* prettier-disable */
+/* @ts-nocheck */
+
 export { pg_colors, pg_fonts, pg_backgrounds }

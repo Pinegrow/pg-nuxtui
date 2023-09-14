@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  // import checkDarkTheme from '@/composables/dark-color-scheme-check?raw'
-  // import type { Script } from '@unhead/schema'
-  // type TurboScript = Script & { once: true }
+  import checkDarkTheme from '@/composables/dark-color-scheme-check?raw'
+  import type { Script } from '@unhead/schema'
+  type TurboScript = Script & { once: true }
 
   const config = useRuntimeConfig()
   const { title, description } = config.public
@@ -26,7 +26,7 @@
       { property: 'keywords', content: route.meta.tags?.toString() },
       { property: 'author', content: 'Pinegrow' },
     ],
-    // script: [{ children: checkDarkTheme, once: true } as TurboScript],
+    script: [{ innerHTML: checkDarkTheme, once: true } as TurboScript],
   })
 </script>
 

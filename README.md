@@ -30,6 +30,16 @@ cd my-nuxtui-app
 npm install #or use pnpm
 ```
 
+(or)
+
+If you prefer a blank template (a single empty home page) instead,
+
+```bash
+npx giget@latest gh:pinegrow/pg-nuxtui#blank my-nuxtui-app #project-name
+cd my-nuxtui-app
+npm install #or use pnpm
+```
+
 ## 2. Open in Vue Designer
 
 Open your project in Vue Designer and follow the instructions displayed in the Config Panel (that should pop out automatically). Config Panel ⚙️ displays the key packages and the various links to their individual ecosystems and communities.
@@ -136,6 +146,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 ### Devtools
 
 - [Nuxt Devtools](https://devtools.nuxtjs.org) - Enhance your DX (developer experience) with an amazing set of in-app features.
+  - **ACTION REQUIRED**: Currently deactivated. In `nuxt.config.ts`, uncomment module to activate.
 - [Vue Devtools](https://devtools.vuejs.org/guide/installation.html#standalone) - Official devtools that can be used as a standalone app alongside Vue Designer. It's configured as a Nuxt plugin (only during development).
   - **ACTION REQUIRED**: Currently deactivated. In `plugins/devtools.client.ts`, uncomment to activate.
 

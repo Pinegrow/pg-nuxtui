@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     '@pinegrow/nuxt-module',
     //@unocss/nuxt & @unocss/preset-icons is not required, as Nuxt UI already includes an UIcon component that uses egoist/tailwindcss-icons which also uses the same unocss format for icon names, for example, i-mdi-home.
     '@nuxt/ui',
-    '@nuxt/devtools',
+    // '@nuxt/devtools',
     '@nuxt/content',
     '@vueuse/nuxt',
     '@nuxtjs/html-validator',
