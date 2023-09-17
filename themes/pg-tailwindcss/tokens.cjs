@@ -216,11 +216,22 @@ const pg_fonts = {
   serif: ["'Inter', sans-serif"],
 }
 
+const pg_font_urls = [
+  'https://fonts.googleapis.com/css?family=DM+Sans:400,500,700|Inter:100,200,300,400,500,600,700,800,900&display=swap',
+]
+
 const pg_backgrounds = {
   'design-image':
     "url('https://images.unsplash.com/photo-1691036562132-56a310d4b789?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5MjM0MjA5N3w&ixlib=rb-4.0.3&q=85')",
   'design-image-large':
     "url('https://images.unsplash.com/photo-1691036562132-56a310d4b789?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5MjM0MjA5N3w&ixlib=rb-4.0.3&q=85')",
+}
+
+const pg_background_urls = {
+  'design-image':
+    'https://images.unsplash.com/photo-1691036562132-56a310d4b789?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5MjM0MjA5N3w&ixlib=rb-4.0.3&q=85',
+  'design-image-large':
+    'https://images.unsplash.com/photo-1691036562132-56a310d4b789?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5MjM0MjA5N3w&ixlib=rb-4.0.3&q=85',
 }
 
 /* Pinegrow generated Design Panel End */
@@ -232,5 +243,7 @@ const pg_backgrounds = {
 module.exports = {
   pg_colors,
   pg_fonts,
+  pg_font_urls,
   pg_backgrounds,
+  pg_background_urls,
 }
