@@ -38,7 +38,7 @@ export default defineNuxtConfig({
         cssPath: '@/assets/css/tailwind.css',
         // TODO: restartOnThemeUpdate is required at the moment to automatically restart nuxt dev server whenever theme is changed in Vue Designer's design panel (which is very slow at the moment)
         // restartOnThemeUpdate might not be required if the HMR issue with nuxt tailwind module is fixed - https://github.com/nuxt-modules/tailwindcss/issues/682
-        // restartOnThemeUpdate: true,
+        restartOnThemeUpdate: true,
       },
       // plugins: [
       //   {
