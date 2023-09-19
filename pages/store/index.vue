@@ -9,7 +9,15 @@
   })
 
   const data = await useProducts()
-  const { products, categories } = data.value
+  const { products: productsRaw, categories } = data.value
+
+  const { optimizeImage } = useOptimizeImage()
+  const products = productsRaw.map((product) => {
+    return {
+      ...product,
+      imageOptimized: optimizeImage(product.image),
+    }
+  })
 
   const filteredCategories = useState('filteredCategories', () => {
     return new Set()
@@ -53,13 +61,8 @@
       <section data-pg-name="Products" class="flex flex-wrap justify-center">
         <ProductCard
           v-for="product in filteredProducts"
-          :id="product.id"
           :key="product.id"
-          :image="product.image"
-          :price="product.price"
-          :title="product.title"
-          :badge="product.badge"
-          :shipping="product.shipping"
+          v-bind="product"
         />
       </section>
     </UContainer>

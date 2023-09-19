@@ -1,6 +1,13 @@
+import { ImageSizes } from '@nuxt/image'
 type Rating = {
   rate: number
   count: number
+}
+
+type ImageOptimized = {
+  imageSizes?: ImageSizes
+  imageSrc?: string
+  imageLazySrc?: string
 }
 
 export type Product = {
@@ -10,6 +17,7 @@ export type Product = {
   description: string
   category: string
   image: string
+  imageOptimized?: ImageOptimized
   rating: Rating
   badge: string
   shipping: string

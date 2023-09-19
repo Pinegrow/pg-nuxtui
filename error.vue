@@ -46,7 +46,9 @@
         Looks like you've followed a broken link or entered a URL that doesn't
         exist on this site.
       </div>
-      <pre v-if="isDev">{{ error }}</pre>
+      <pre v-if="isDev" style="width: 100%; white-space: normal">{{
+        error
+      }}</pre>
       <button
         style="
           background-color: gray;

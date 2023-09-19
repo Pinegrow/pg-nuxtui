@@ -1,10 +1,6 @@
 <script setup lang="ts">
-  // const props = defineProps({
-  // 	name: {
-  // 		type: String,
-  // 		default: 'WalkThrough',
-  // 	},
-  // })
+  import vueDesignerLogo from '@/assets/images/vue-designer.svg'
+  const showTitle = ref(true)
 </script>
 <template>
   <div class="px-4 py-24 relative bg-primary-600 dark:bg-primary-200">
@@ -16,15 +12,25 @@
               Feature Walkthrough
             </h3>
           </div>
-          <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed/1WDZdu6XwI8"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <div>
+            <div
+              v-if="showTitle"
+              class="absolute flex items-center justify-center ml-2 my-0.5 z-10"
+            >
+              <img :src="vueDesignerLogo" height="28" width="28" />
+              <span class="ml-1 mt-1 p-1 text-lg text-neutral-50"
+                >Vue Designer - Quick Start</span
+              >
+            </div>
+            <lite-youtube
+              ref="youtube"
+              videoid="1WDZdu6XwI8"
+              title="Vue Designer - Quick Start"
+              playlabel="Vue Designer - Quick Start"
+              class="px-4 py-12 rounded"
+              @click="showTitle = false"
+            />
+          </div>
         </div>
       </div>
       <div class="flex-col flex mx-auto p-4 w-full lg:w-6/12">
