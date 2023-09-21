@@ -1,3 +1,5 @@
+import { ImageOptimized } from './image'
+
 type Rating = {
   rate: number
   count: number
@@ -10,6 +12,7 @@ export type Product = {
   description: string
   category: string
   image: string
+  imageOptimized?: ImageOptimized
   rating: Rating
   badge: string
   shipping: string

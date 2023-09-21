@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     '@nuxtjs/html-validator',
+    '@nuxt/image',
   ],
   pinegrow: {
     liveDesigner: {
@@ -35,9 +36,9 @@ export default defineNuxtConfig({
       tailwindcss: {
         configPath: 'tailwind.config.ts',
         cssPath: '@/assets/css/tailwind.css',
-        // TODO: restartOnThemeUpdate is required at the moment to automatically restart nuxt dev server whenever theme is changed in Vue Designer's design panel (which is very slow at the moment)
-        // restartOnThemeUpdate might not be required if the HMR issue with nuxt tailwind module is fixed - https://github.com/nuxt-modules/tailwindcss/issues/682
-        // restartOnThemeUpdate: true,
+        // themePath: false, // Set to false so that Design Panel is not used
+        // restartOnConfigUpdate: true,
+        restartOnThemeUpdate: true,
       },
       // plugins: [
       //   {
@@ -62,6 +63,43 @@ export default defineNuxtConfig({
     //   'info',
     // ],
   },
+
+  // Vuetify's global styles
+  css: ['lite-youtube-embed/src/lite-yt-embed.css'],
+
+  image: {
+    domains: ['images.unsplash.com', 'fakestoreapi.com'],
+    alias: {
+      unsplash: 'https://images.unsplash.com',
+    },
+    // The screen sizes predefined by `@nuxt/image`:
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      '2xl': 1536,
+    },
+    presets: {
+      avatar: {
+        modifiers: {
+          format: 'jpg',
+          width: 80,
+          height: 80,
+        },
+      },
+      // product: {
+      //   modifiers: {
+      //     format: 'jpg',
+      //     // width: 50,
+      //     height: 256,
+      //   },
+      // },
+    },
+  },
+
   content: {
     markdown: {
       anchorLinks: false,
@@ -78,6 +116,11 @@ export default defineNuxtConfig({
     },
     highlight: {
       theme: 'dracula-soft',
+    },
+  },
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => tag === 'lite-youtube',
     },
   },
 })

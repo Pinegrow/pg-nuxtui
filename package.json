@@ -23,17 +23,18 @@
     "@nuxt/content": "^2.8.2",
     "@nuxt/devtools": "^0.7.1",
     "@nuxt/eslint-config": "^0.1.1",
+    "@nuxt/image": "^1.0.0-rc.2",
     "@nuxt/ui": "^2.8.1",
     "@nuxtjs/html-validator": "^1.5.2",
-    "@pinegrow/nuxt-module": "^3.0.18",
-    "@pinegrow/nuxtui-plugin": "^3.0.21",
-    "@pinegrow/tailwindcss-plugin": "^3.0.10",
+    "@pinegrow/nuxt-module": "^3.0.19",
+    "@pinegrow/nuxtui-plugin": "^3.0.29",
+    "@pinegrow/tailwindcss-plugin": "^3.0.17",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "^20.5.0",
     "@unocss/preset-icons": "^0.54.1",
     "@vue/devtools": "^6.5.0",
-    "@vueuse/nuxt": "^10.1.2",
+    "@vueuse/nuxt": "^10.4.1",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.7.0",
@@ -46,7 +47,8 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@vueuse/core": "^10.1.2"
+    "@vueuse/core": "^10.4.1",
+    "lite-youtube-embed": "^0.2.0"
   },
   "web-types": "web-types.json"
 }
