@@ -36,6 +36,7 @@ export default defineNuxtConfig({
       tailwindcss: {
         configPath: 'tailwind.config.ts',
         cssPath: '@/assets/css/tailwind.css',
+        // themePath: false, // Set to false so that Design Panel is not used
         // restartOnConfigUpdate: true,
         restartOnThemeUpdate: true,
       },
