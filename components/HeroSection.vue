@@ -1,12 +1,42 @@
 <script setup lang="ts">
-  // import { pg_background_urls } from '~~/themes/pg-tailwindcss/tokens.mjs'
+  import { pg_background_urls } from '~~/themes/pg-tailwindcss/tokens.mjs'
 
-  // const heroImageUrl =
-  //   pg_background_urls['design-image-large'] ||
-  //   pg_background_urls['design-image']
+  const { optimizeImage, optimizeImages } = useOptimizeImage()
 
-  // const { optimizeImage, optimizeImages } = useOptimizeImage()
-  // const { bgStyles } = optimizeImage(heroImageUrl)
+  const heroImageUrl =
+    pg_background_urls['design-image-large'] ||
+    pg_background_urls['design-image']
+
+  const heroImageOptimized = optimizeImage(heroImageUrl)
+
+  // https://dev.to/ingosteinke/responsive-background-images-with-image-set-the-srcset-for-background-image-259a
+  const responsiveHeroImages = computed(() => {
+    return heroImageOptimized.imageSizes.srcset
+      .split(', ')
+      .filter((imgUrl) => imgUrl.endsWith('768w') || imgUrl.endsWith('2560w'))
+  })
+
+  const responsiveHeroImageSrc = computed(() => {
+    return {
+      'background-image': `url("${responsiveHeroImages.value[0]}")`,
+    }
+  })
+
+  const responsiveHeroImageSrcImageSet = computed(() => {
+    return {
+      'background-image': `image-set(
+      url("${responsiveHeroImages.value[0]}") 1x,
+      url("${responsiveHeroImages.value[1]}") 2x)`,
+    }
+  })
+
+  const responsiveHeroImageSrcImageSetFallback = computed(() => {
+    return {
+      'background-image': `-webkit-image-set(
+      url("${responsiveHeroImages.value[0]}") 1x,
+      url("${responsiveHeroImages.value[1]}") 2x)`,
+    }
+  })
 
   const avatarImageUrls = [
     'https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDQyfHxwcm9maWxlfGVufDB8fHx8MTY4NzE2ODcyNnww&ixlib=rb-4.0.3&q=80&w=200',
@@ -17,12 +47,17 @@
     'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGF2YXRhcnxlbnwwfHx8fDE2OTUxMDA0OTV8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=40&h=40&fit=crop',
   ]
 
-  // const avatarImageUrlsOptimized = optimizeImages(avatarImageUrls, 'avatar')
+  const avatarImageUrlsOptimized = optimizeImages(avatarImageUrls, 'avatar')
 </script>
 <template>
   <section>
     <div
-      class="bg-center bg-cover bg-design-image bg-no-repeat blur-none z-0 lg:bg-design-image-large"
+      class="bg-center bg-cover bg-no-repeat blur-none z-0"
+      :style="[
+        responsiveHeroImageSrc,
+        responsiveHeroImageSrcImageSet,
+        responsiveHeroImageSrcImageSetFallback,
+      ]"
     >
       <div
         class="pb-36 pt-2 px-6 relative rounded-3xl md:pb-48 lg:pb-72 lg:px-12"
@@ -48,9 +83,9 @@
                 <div class="flex justify-center">
                   <UAvatarGroup :max="3" size="2xl">
                     <UAvatar
-                      v-for="(avatar, index) in avatarImageUrls"
+                      v-for="(avatar, index) in avatarImageUrlsOptimized"
                       :key="index"
-                      :src="avatar"
+                      :src="avatar.imageSrc"
                       size="xl"
                       alt="avatar"
                     ></UAvatar>

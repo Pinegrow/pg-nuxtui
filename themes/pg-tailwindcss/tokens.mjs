@@ -197,17 +197,17 @@ const pg_colors = {
   },
   neutral: {
     50: '#ebebeb',
-    100: '#c4c4c4',
-    200: '#9f9f9f',
-    300: '#7b7b7b',
-    400: '#585858',
-    500: '#383838',
-    600: '#1b1b1b',
-    700: '#191919',
-    800: '#171717',
-    900: '#151515',
-    950: '#131313',
-    DEFAULT: '#101010',
+    100: '#c2c2c2',
+    200: '#9b9b9b',
+    300: '#757575',
+    400: '#525252',
+    500: '#303030',
+    600: '#121212',
+    700: '#111111',
+    800: '#0f0f0f',
+    900: '#0e0e0e',
+    950: '#0c0c0c',
+    DEFAULT: '#0b0b0b',
   },
 }
 
@@ -229,4 +229,15 @@ const pg_backgrounds = {
 /* prettier-disable */
 /* @ts-nocheck */
 
-export { pg_colors, pg_fonts, pg_backgrounds }
+const pg_font_urls = [
+  'https://fonts.googleapis.com/css?family=DM+Sans:400,500,700|Inter:100,200,300,400,500,600,700,800,900&display=swap',
+]
+
+const pg_background_urls = {
+  'design-image':
+    'https://images.unsplash.com/photo-1691036562132-56a310d4b789?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5MjM0MjA5N3w&ixlib=rb-4.0.3&q=85',
+  'design-image-large':
+    'https://images.unsplash.com/photo-1691036562132-56a310d4b789?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5MjM0MjA5N3w&ixlib=rb-4.0.3&q=85',
+}
+
+export { pg_colors, pg_fonts, pg_font_urls, pg_backgrounds, pg_background_urls }
