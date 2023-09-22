@@ -21,7 +21,7 @@
                 <dmcolor key="neutral" color="#1b1b1b" shade-50="#ebebeb" shade-100="#c4c4c4" shade-200="#9f9f9f" shade-300="#7b7b7b" shade-400="#585858" shade-500="#383838" shade-600="#1b1b1b" shade-700="#191919" shade-800="#171717" shade-900="#151515" shade-950="#131313" shade-DEFAULT="#101010"/>
             </dmdesignskill>
             <dmdesignskill skill="fonts" family_1="DM Sans" family_2="Inter"></dmdesignskill>
-            <dmdesignskill skill="background" image_for_colors advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0" image="https://images.unsplash.com/photo-1691036562132-56a310d4b789?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5MjM0MjA5N3w&ixlib=rb-4.0.3&q=85" selector=".poster"></dmdesignskill>
+            <dmdesignskill skill="background" image_for_colors advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0" image="https://images.unsplash.com/photo-1691036562132-56a310d4b789?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5MjM0MjA5N3w&ixlib=rb-4.0.3&q=85" selector=".poster" keyword="shopping fashion"></dmdesignskill>
         </dmdesign>
         <dmdesign>
             <dmdesignskill skill="tw.colors" harmony="">
@@ -43,7 +43,7 @@
                 <dmcolor key="neutral" color="#1b1b1b" shade-50="#ebebeb" shade-100="#c4c4c4" shade-200="#9f9f9f" shade-300="#7b7b7b" shade-400="#585858" shade-500="#383838" shade-600="#1b1b1b" shade-700="#191919" shade-800="#171717" shade-900="#151515" shade-950="#131313" shade-DEFAULT="#101010"/>
             </dmdesignskill>
             <dmdesignskill skill="fonts" family_1="Fira Sans" family_2="Georgia, serif"></dmdesignskill>
-            <dmdesignskill skill="background" image_for_colors advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0" image="https://images.unsplash.com/photo-1682685797736-dabb341dc7de?ixid=M3wyMDkyMnwxfDF8c2VhcmNofDF8fHdhbGxwYXBlcnxlbnwwfHx8fDE2ODQ0MTE0Nzh8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&fit=max" selector=".poster"></dmdesignskill>
+            <dmdesignskill skill="background" image_for_colors advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0" image="https://images.unsplash.com/photo-1682685797736-dabb341dc7de?ixid=M3wyMDkyMnwxfDF8c2VhcmNofDF8fHdhbGxwYXBlcnxlbnwwfHx8fDE2ODQ0MTE0Nzh8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&fit=max" selector=".poster" keyword="shopping fashion"></dmdesignskill>
         </dmdesign>
         <dmdesign>
             <dmdesignskill skill="tw.colors" harmony="">
@@ -65,7 +65,7 @@
                 <dmcolor key="neutral" color="#1b1b1b" shade-50="#ebebeb" shade-100="#c4c4c4" shade-200="#9f9f9f" shade-300="#7b7b7b" shade-400="#585858" shade-500="#383838" shade-600="#1b1b1b" shade-700="#191919" shade-800="#171717" shade-900="#151515" shade-950="#131313" shade-DEFAULT="#101010"/>
             </dmdesignskill>
             <dmdesignskill skill="fonts" family_1="Fira Sans" family_2="Georgia, serif"></dmdesignskill>
-            <dmdesignskill skill="background" image_for_colors advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0" image="https://images.unsplash.com/photo-1682685797736-dabb341dc7de?ixid=M3wyMDkyMnwxfDF8c2VhcmNofDF8fHdhbGxwYXBlcnxlbnwwfHx8fDE2ODQ0MTE0Nzh8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&fit=max" selector=".poster"></dmdesignskill>
+            <dmdesignskill skill="background" image_for_colors advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0" image="https://images.unsplash.com/photo-1682685797736-dabb341dc7de?ixid=M3wyMDkyMnwxfDF8c2VhcmNofDF8fHdhbGxwYXBlcnxlbnwwfHx8fDE2ODQ0MTE0Nzh8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&fit=max" selector=".poster" keyword="shopping fashion"></dmdesignskill>
         </dmdesign>
     </dmdesigns>
     <dmlocked tw-colors-gray="true" tw-colors-red="true" tw-colors-yellow="true" tw-colors-green="true" tw-colors-blue="true" tw-colors-indigo="true" tw-colors-purple="true" tw-colors-pink="true" tw-colors-error="true" tw-colors-neutral="true" tw-colors-success="true" tw-colors-warning="true" tw-colors-info="true"></dmlocked>
