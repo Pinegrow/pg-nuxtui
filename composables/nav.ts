@@ -1,4 +1,5 @@
 import { computed } from 'vue'
+import site from '@/site'
 
 export const useNav = () => {
   const routes = useRouter().getRoutes()
@@ -21,8 +22,7 @@ export const useNav = () => {
       }
     })
 
-  const config = useRuntimeConfig()
-  const navlinksFromConfig = config.public.nav
+  const navlinksFromConfig = site.nav
   const navlinks = computed(() => navlinksFromConfig || navlinksFromRouter)
 
   const currentRoute = useRoute()

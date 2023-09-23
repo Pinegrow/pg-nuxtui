@@ -21,7 +21,7 @@ export const useOptimizeImage = () => {
         // width: height / 4,
         quality: 70,
       }),
-      bgStyles: [],
+      bgStyles: '',
     }
 
     // https://dev.to/ingosteinke/responsive-background-images-with-image-set-the-srcset-for-background-image-259a
@@ -31,27 +31,19 @@ export const useOptimizeImage = () => {
         .filter((imgUrl) => imgUrl.endsWith('768w') || imgUrl.endsWith('2560w'))
     })
 
-    const responsiveImageSrc = {
-      'background-image': `url("${responsiveImages.value[0]}")`,
-    }
+    const responsiveImageSrc = `url("${responsiveImages.value[0]}")`
 
-    const responsiveImageSrcImageSet = {
-      'background-image': `image-set(
-    url("${responsiveImages.value[0]}") 1x,
-    url("${responsiveImages.value[1]}") 2x)`,
-    }
+    const responsiveImageSrcImageSet = `image-set(url("${responsiveImages.value[0]}") 1x,url("${responsiveImages.value[1]}") 2x)`
 
-    const responsiveImageSrcImageSetFallback = {
-      'background-image': `-webkit-image-set(
-    url("${responsiveImages.value[0]}") 1x,
-    url("${responsiveImages.value[1]}") 2x)`,
-    }
+    const responsiveImageSrcImageSetFallback = `-webkit-image-set(url("${responsiveImages.value[0]}") 1x,url("${responsiveImages.value[1]}") 2x)`
 
     imageOptimized.bgStyles = [
       responsiveImageSrc,
       responsiveImageSrcImageSet,
       responsiveImageSrcImageSetFallback,
-    ]
+    ].reduce((acc, bgStyle) => {
+      return `${acc}background-image:${bgStyle};`
+    }, '')
 
     return imageOptimized
   }
