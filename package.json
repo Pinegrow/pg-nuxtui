@@ -55,8 +55,5 @@
     "tailwindcss": "^3.3.1",
     "typescript": "^5.0.4"
   },
-  "overrides": {
-    "vue": "latest"
-  },
   "web-types": "web-types.json"
 }
