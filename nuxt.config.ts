@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     '@pinia/nuxt',
-    '@nuxtjs/html-validator',
+    // '@nuxtjs/html-validator',
     '@nuxt/image',
     '@vee-validate/nuxt',
     //@unocss/nuxt & @unocss/preset-icons is not required, as Nuxt UI already includes an UIcon component that uses egoist/tailwindcss-icons which also uses the same unocss format for icon names, for example, i-mdi-home.
