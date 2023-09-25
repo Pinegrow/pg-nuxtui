@@ -26,6 +26,7 @@
   }
 </script>
 <template>
+  <NuxtLoadingIndicator />
   <NuxtLayout>
     <div
       style="

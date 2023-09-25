@@ -4,6 +4,7 @@
   type TurboScript = Script & { once: true }
 
   import site from '@/site'
+  import image from '@/screenshots/image.jpg'
   import { pg_font_urls } from '~~/themes/pg-tailwindcss/tokens.mjs'
 
   const link: any = [
@@ -35,7 +36,7 @@
     )
   }
 
-  const { title, description, url, image } = site
+  const { title, description, url } = site
 
   const route = useRoute()
 
