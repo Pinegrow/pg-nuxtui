@@ -48,6 +48,7 @@
     description,
     // ogTitle: title,
     // ogDescription: description,
+    // ogType: 'website',
     // ogImage: image,
     // ogImageAlt: title,
     // og:image:width
@@ -63,7 +64,8 @@
     // twitterDescription: description,
     // twitterImage: image,
     // twitterImageAlt: title,
-    // twitterSite: url,
+    // twitterSite: '@vuedesigner',
+    // twitterCreator: '@techakayy',
     // twitterCard: 'summary_large_image',
   })
 
@@ -92,15 +94,17 @@
   <Head>
     <Meta property="og:title" :content="title" />
     <Meta property="og:description" :content="description" />
+    <Meta property="og:type" content="website" />
     <Meta property="og:image" :content="image" />
     <Meta property="og:image:alt" :content="title" />
     <Meta property="og:url" :content="url" />
-    <Meta property="og:site-name" content="summary_large_image" />
+    <Meta property="og:site-name" :content="title" />
     <Meta name="twitter:title" :content="title" />
     <Meta name="twitter:description" :content="description" />
     <Meta name="twitter:image" :content="image" />
     <Meta name="twitter:image:alt" :content="title" />
-    <Meta name="twitter:site" :content="url" />
+    <Meta name="twitter:site" content="@vuedesigner" />
+    <Meta name="twitter:creator" content="@techakayy" />
     <Meta name="twitter:card" content="summary_large_image" />
     <!-- <Meta name="twitter:card" content="summary" /> -->
   </Head>
