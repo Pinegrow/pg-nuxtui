@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { Product } from '../types/store'
-  const { id, title, price, imageOptimized, badge, shipping } =
+  const { id, title, price, image, imageOptimized, badge, shipping } =
     defineProps<Product>()
 </script>
 <template>
@@ -15,13 +15,14 @@
           ></UBadge>
           <div class="flex justify-center">
             <div class="-m-4 bg-white h-64 p-6 rounded-lg">
-              <img
+              <!-- <img
                 class="max-h-full"
                 :src="imageOptimized.imageSrc"
                 :srcset="imageOptimized.imageSizes.srcset"
                 :sizes="imageOptimized.imageSizes.sizes"
                 height="250"
-              />
+              /> -->
+              <img v-if="image" :src="image" height="250" />
             </div>
           </div>
         </div>

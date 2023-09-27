@@ -51,13 +51,16 @@
 </script>
 <template>
   <section>
-    <div
+    <!-- <div
       class="bg-center bg-cover bg-no-repeat blur-none z-0"
       :style="[
         responsiveHeroImageSrc,
         responsiveHeroImageSrcImageSet,
         responsiveHeroImageSrcImageSetFallback,
       ]"
+    > -->
+    <div
+      class="bg-center bg-cover bg-no-repeat blur-none z-0 bg-design-image lg:bg-design-image-large"
     >
       <div
         class="pb-36 pt-2 px-6 relative rounded-3xl md:pb-48 lg:pb-72 lg:px-12"
@@ -82,10 +85,17 @@
               <template #default>
                 <div class="flex justify-center">
                   <UAvatarGroup :max="3" size="2xl">
-                    <UAvatar
+                    <!-- <UAvatar
                       v-for="(avatar, index) in avatarImageUrlsOptimized"
                       :key="index"
                       :src="avatar.imageSrc"
+                      size="xl"
+                      alt="avatar"
+                    ></UAvatar> -->
+                    <UAvatar
+                      v-for="(avatar, index) in avatarImageUrls"
+                      :key="index"
+                      :src="avatar"
                       size="xl"
                       alt="avatar"
                     ></UAvatar>
