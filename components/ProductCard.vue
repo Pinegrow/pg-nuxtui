@@ -22,7 +22,7 @@
                 :sizes="imageOptimized.imageSizes.sizes"
                 height="250"
               /> -->
-              <img v-if="image" :src="image" height="250" />
+              <img v-if="image" :src="image" height="250" class="max-h-full" />
             </div>
           </div>
         </div>
@@ -30,8 +30,8 @@
       <div>
         <span>{{ title }}</span>
         <div class="flex font-medium items-center justify-between mt-4">
-          <span class="font-bold">${{ price }}</span>
-          <span
+          <span class="font-bold">${{ price }}</span
+          ><span
             v-if="shipping"
             class="dark:text-primary-400 text-primary-500 text-xs"
             >{{ shipping }}</span
