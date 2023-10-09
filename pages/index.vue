@@ -1,7 +1,11 @@
 <script setup lang="ts">
   definePageMeta({
-    // layout: 'default',
-    title: 'Index',
+    title: 'Home',
+    navOrder: 1,
+  })
+
+  useHead({
+    title: () => 'Home',
   })
 </script>
 <template>
