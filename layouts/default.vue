@@ -7,7 +7,7 @@
       <!-- <NavBar /> -->
       <slot />
     </div>
-    <TheFooter></TheFooter>
+    <!-- <TheFooter></TheFooter> -->
   </div>
 </template>
 <style></style>
