@@ -59,7 +59,7 @@
       "attributes": [
         {
           "name": "color",
-          "customType": "color",
+          "customType": "select",
           "options": []
         }
       ]

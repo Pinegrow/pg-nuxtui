@@ -23,4 +23,5 @@ export type Products = Product[]
 export type Store = {
   products: Products
   categories: string[]
+  badges: string[]
 }
