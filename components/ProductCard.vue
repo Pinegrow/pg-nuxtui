@@ -11,7 +11,7 @@
           <UBadge
             v-if="badge"
             :label="badge"
-            class="-right-6 -top-5 absolute rounded-br-none rounded-tl-none z-10"
+            class="-right-4 -top-5 absolute rounded-br-none rounded-tl-none z-10"
           ></UBadge>
           <div class="flex justify-center">
             <div class="-m-4 bg-white h-64 p-6 rounded-lg">
@@ -30,8 +30,8 @@
       <div>
         <span>{{ title }}</span>
         <div class="flex font-medium items-center justify-between mt-4">
-          <span class="font-bold">${{ price }}</span
-          ><span
+          <span class="font-bold">${{ price }}</span>
+          <span
             v-if="shipping"
             class="dark:text-primary-400 text-primary-500 text-xs"
             >{{ shipping }}</span

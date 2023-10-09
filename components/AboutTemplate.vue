@@ -31,7 +31,7 @@
           </div>
           <div class="p-5 text-center w-full whitespace-nowrap">
             <h5>UI-framework</h5>
-            <p class="text-primary-600 dark:text-primary-200">Tailwind CSS</p>
+            <p class="text-primary-600 dark:text-primary-200">Nuxt UI</p>
           </div>
         </div>
       </div>
@@ -51,7 +51,14 @@
             href="https://www.npmjs.com/package/@pinegrow/nuxt-module"
             >Pinegrow Nuxt Module</NuxtLink
           >
-          <span>, </span>
+          <span>, </span
+          ><NuxtLink
+            class="font-mono text-sm underline text-primary-600 dark:text-primary-200"
+            target="_blank"
+            external
+            href="https://www.npmjs.com/package/@pinegrow/nuxtui-plugin"
+            >Pinegrow NuxtUI Plugin</NuxtLink
+          ><span>, </span>
           <NuxtLink
             class="font-mono text-sm underline text-primary-600 dark:text-primary-200"
             target="_blank"
@@ -62,7 +69,6 @@
           that enables you to visually design your Vue single-file components in
           Vue Designer.
         </p>
-
         <div class="flex justify-center lg:justify-start">
           <UButton label="Quick Start >" size="lg" to="/quick-start"></UButton>
         </div>

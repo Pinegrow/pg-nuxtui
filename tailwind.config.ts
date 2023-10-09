@@ -30,7 +30,7 @@ export default {
       './layouts/**/*.vue',
       './pages/**/*.vue',
       './plugins/**/*.{js,ts}',
-      './nuxt.config.{js,ts}',
+      // './nuxt.config.{js,ts}',
       './app.vue',
       '*.{mjs,js,ts}',
     ]

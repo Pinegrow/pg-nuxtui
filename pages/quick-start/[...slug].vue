@@ -29,8 +29,7 @@
             color="secondary"
             to="https://github.com/pinegrow/pg-nuxtui"
             target="_blank"
-          >
-            <span>Click here</span>
+            ><span>Click here</span>
           </UButton>
         </div>
         <slot />
@@ -65,6 +64,8 @@
         </div>
       </div>
     </section>
+    <AboutTemplate></AboutTemplate>
+    <WalkThrough></WalkThrough>
   </div>
 </template>
 <style scoped></style>

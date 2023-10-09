@@ -17,8 +17,8 @@
               v-if="showTitle"
               class="absolute flex items-center justify-center ml-2 my-0.5 z-10"
             >
-              <img :src="vueDesignerLogo" height="28" width="28" />
-              <span class="ml-1 mt-1 p-1 text-lg text-neutral-50"
+              <img :src="vueDesignerLogo" height="28" width="28" /><span
+                class="ml-1 mt-1 p-1 text-lg text-neutral-50"
                 >Vue Designer - Quick Start</span
               >
             </div>

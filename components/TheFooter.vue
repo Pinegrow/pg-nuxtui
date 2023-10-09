@@ -26,7 +26,6 @@
         >
           <UIcon name="i-logos-twitter" class="text-2xl"></UIcon>
         </NuxtLink>
-
         <NuxtLink
           href="https://discord.gg/BYp45Nnu5T"
           aria-label="discord"

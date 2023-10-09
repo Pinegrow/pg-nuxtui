@@ -81,28 +81,6 @@
               A desktop drag-and-drop editor for Mac, Windows and Linux that
               lets you visually design your Vue apps.
             </h5>
-            <UCard class="mt-4">
-              <template #default>
-                <div class="flex justify-center">
-                  <UAvatarGroup :max="3" size="2xl">
-                    <!-- <UAvatar
-                      v-for="(avatar, index) in avatarImageUrlsOptimized"
-                      :key="index"
-                      :src="avatar.imageSrc"
-                      size="xl"
-                      alt="avatar"
-                    ></UAvatar> -->
-                    <UAvatar
-                      v-for="(avatar, index) in avatarImageUrls"
-                      :key="index"
-                      :src="avatar"
-                      size="xl"
-                      alt="avatar"
-                    ></UAvatar>
-                  </UAvatarGroup>
-                </div>
-              </template>
-            </UCard>
             <UButton
               label="Learn More!"
               to="https://vuedesigner.com"

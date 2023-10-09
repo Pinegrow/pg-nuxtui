@@ -1,18 +1,16 @@
 <script setup lang="ts">
   definePageMeta({
-    title: 'Home',
-    navOrder: 1,
-  })
-
-  useHead({
-    title: () => 'Home',
+    // layout: 'default',
+    title: 'Index',
   })
 </script>
 <template>
-  <main>
-    <HeroSection />
-    <AboutTemplate />
-    <WalkThrough />
-  </main>
+  <div>
+    <HeroSection></HeroSection>
+    <UContainer class="pt-8">
+      <LaunchSale class="mt-8" />
+      <HotDeals class="mt-8" />
+    </UContainer>
+  </div>
 </template>
 <style scoped></style>

@@ -25,6 +25,14 @@ export const useNav = () => {
   const navlinksFromConfig = site.nav
   const navlinks = computed(() => navlinksFromConfig || navlinksFromRouter)
 
+  const navlinksPrimary = computed(() => {
+    return navlinks.value.filter((navlink) => navlink.type === 'primary')
+  })
+
+  const navlinksSecondary = computed(() => {
+    return navlinks.value.filter((navlink) => navlink.type === 'secondary')
+  })
+
   const currentRoute = useRoute()
   const currentPath = computed(() => {
     return currentRoute.path
@@ -32,6 +40,8 @@ export const useNav = () => {
 
   return {
     navlinks,
+    navlinksPrimary,
+    navlinksSecondary,
     currentPath,
   }
 }

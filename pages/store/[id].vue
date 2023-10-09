@@ -36,10 +36,10 @@
     },
   ]
 
-  const selected = ref(colors[0])
+  const selected = ref(colors[0].id)
 
   const current = computed(() =>
-    colors.find((color) => color.id === selected.value.id),
+    colors.find((color) => color.id === selected.value),
   )
 </script>
 <template layout="default">
@@ -88,9 +88,7 @@
         <div>
           <span class="font-bold text-xl">${{ product.price }}</span>
         </div>
-        <div class="md:mr-4">
-          <span>Best Deals Inc.</span>
-        </div>
+        <div class="md:mr-4"><span>Best Deals Inc.</span></div>
       </div>
       <div>
         <div class="mt-4">
@@ -101,14 +99,14 @@
             value-attribute="id"
             size="xl"
           >
-            <template #label>
-              <span>{{ current.name }}</span>
+            <template #label
+              ><span>{{ current.name }}</span>
             </template>
           </USelectMenu>
         </div>
         <div class="mt-4 w-full">
-          <UButton label="Add To Cart" class="rounded-lg" size="lg" block
-            ><span class="py-2 lg:text-lg">Add To Cart</span>
+          <UButton label="Add To Cart" class="rounded-lg" size="lg" block>
+            <span class="py-2 lg:text-lg">Add To Cart</span>
           </UButton>
         </div>
       </div>

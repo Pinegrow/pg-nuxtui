@@ -1,143 +1,50 @@
 /* Pinegrow generated Design Panel Begin */
+/* eslint-disable */
+/* prettier-disable */
+/* @ts-nocheck */
 
 const pg_colors = {
-  gray: {
-    50: '#f9fafb',
-    100: '#f3f4f6',
-    200: '#e5e7eb',
-    300: '#d1d5db',
-    400: '#9ca3af',
-    500: '#6b7280',
-    600: '#4b5563',
-    700: '#374151',
-    800: '#1f2937',
-    900: '#111827',
-  },
-  red: {
-    50: '#fef2f2',
-    100: '#fee2e2',
-    200: '#fecaca',
-    300: '#fca5a5',
-    400: '#f87171',
-    500: '#ef4444',
-    600: '#dc2626',
-    700: '#b91c1c',
-    800: '#991b1b',
-    900: '#7f1d1d',
-  },
-  yellow: {
-    50: '#fffbeb',
-    100: '#fef3c7',
-    200: '#fde68a',
-    300: '#fcd34d',
-    400: '#fbbf24',
-    500: '#f59e0b',
-    600: '#d97706',
-    700: '#b45309',
-    800: '#92400e',
-    900: '#78350f',
-  },
-  green: {
-    50: '#ecfdf5',
-    100: '#d1fae5',
-    200: '#a7f3d0',
-    300: '#6ee7b7',
-    400: '#34d399',
-    500: '#10b981',
-    600: '#059669',
-    700: '#047857',
-    800: '#065f46',
-    900: '#064e3b',
-  },
-  blue: {
-    50: '#eff6ff',
-    100: '#dbeafe',
-    200: '#bfdbfe',
-    300: '#93c5fd',
-    400: '#60a5fa',
-    500: '#3b82f6',
-    600: '#2563eb',
-    700: '#1d4ed8',
-    800: '#1e40af',
-    900: '#1e3a8a',
-  },
-  indigo: {
-    50: '#eef2ff',
-    100: '#e0e7ff',
-    200: '#c7d2fe',
-    300: '#a5b4fc',
-    400: '#818cf8',
-    500: '#6366f1',
-    600: '#4f46e5',
-    700: '#4338ca',
-    800: '#3730a3',
-    900: '#312e81',
-  },
-  purple: {
-    50: '#f5f3ff',
-    100: '#ede9fe',
-    200: '#ddd6fe',
-    300: '#c4b5fd',
-    400: '#a78bfa',
-    500: '#8b5cf6',
-    600: '#7c3aed',
-    700: '#6d28d9',
-    800: '#5b21b6',
-    900: '#4c1d95',
-  },
-  pink: {
-    50: '#fdf2f8',
-    100: '#fce7f3',
-    200: '#fbcfe8',
-    300: '#f9a8d4',
-    400: '#f472b6',
-    500: '#ec4899',
-    600: '#db2777',
-    700: '#be185d',
-    800: '#9d174d',
-    900: '#831843',
-  },
   primary: {
-    50: '#edf3ee',
-    100: '#d5e6d4',
-    200: '#bcd9ba',
-    300: '#a3cba1',
-    400: '#8abe89',
-    500: '#70b171',
-    600: '#55a359',
-    700: '#4e9551',
-    800: '#47884a',
-    900: '#407a43',
-    950: '#396d3c',
-    DEFAULT: '#326035',
+    50: '#fbebef',
+    100: '#fcceda',
+    200: '#fab1c5',
+    300: '#f793b1',
+    400: '#f2739c',
+    500: '#eb4f89',
+    600: '#e31376',
+    700: '#d0126c',
+    800: '#bd1062',
+    900: '#aa0f59',
+    950: '#980d4f',
+    DEFAULT: '#860b46',
   },
   secondary: {
-    50: '#edeeec',
-    100: '#cfd6c8',
-    200: '#b3bea6',
-    300: '#96a785',
-    400: '#7b9065',
-    500: '#5f7a46',
-    600: '#446428',
-    700: '#3e5c25',
-    800: '#395321',
-    900: '#334b1e',
-    950: '#2e431b',
-    DEFAULT: '#283b18',
+    50: '#ecf0eb',
+    100: '#cddcc6',
+    200: '#afc8a1',
+    300: '#91b57d',
+    400: '#72a15a',
+    500: '#528e37',
+    600: '#2d7b0b',
+    700: '#29710a',
+    800: '#266609',
+    900: '#225c08',
+    950: '#1e5207',
+    DEFAULT: '#1b4907',
   },
   tertiary: {
-    50: '#f7f9f2',
-    100: '#eef3e2',
-    200: '#e5ecd3',
-    300: '#dce6c3',
-    400: '#d3e0b4',
-    500: '#c9d9a4',
-    600: '#c0d395',
-    700: '#b0c188',
-    800: '#a0b07c',
-    900: '#909e70',
-    950: '#818d64',
-    DEFAULT: '#727d58',
+    50: '#fdeded',
+    100: '#ffd5d1',
+    200: '#ffbdb6',
+    300: '#ffa49a',
+    400: '#fe897f',
+    500: '#f96e65',
+    600: '#f34f4c',
+    700: '#de4846',
+    800: '#ca423f',
+    900: '#b63b39',
+    950: '#a33533',
+    DEFAULT: '#902f2d',
   },
   success: {
     50: '#ecf0ec',
@@ -197,47 +104,41 @@ const pg_colors = {
   },
   neutral: {
     50: '#ebebeb',
-    100: '#c2c2c2',
-    200: '#9b9b9b',
-    300: '#757575',
-    400: '#525252',
-    500: '#303030',
-    600: '#121212',
-    700: '#111111',
-    800: '#0f0f0f',
-    900: '#0e0e0e',
-    950: '#0c0c0c',
-    DEFAULT: '#0b0b0b',
+    100: '#c4c4c4',
+    200: '#9f9f9f',
+    300: '#7b7b7b',
+    400: '#585858',
+    500: '#383838',
+    600: '#1b1b1b',
+    700: '#191919',
+    800: '#171717',
+    900: '#151515',
+    950: '#131313',
+    DEFAULT: '#101010',
   },
 }
 
 const pg_fonts = {
-  sans: ["'DM Sans', sans-serif"],
-  serif: ["'Inter', sans-serif"],
+  sans: ["'Inter', sans-serif"],
+  serif: ["'Kalam', sans-serif"],
 }
+
+const pg_font_urls = [
+  'https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900|Kalam:300,400,700&display=swap',
+]
 
 const pg_backgrounds = {
   'design-image':
-    "url('https://images.unsplash.com/photo-1691036562132-56a310d4b789?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5MjM0MjA5N3w&ixlib=rb-4.0.3&q=85')",
+    "url('https://images.unsplash.com/photo-1601924994987-69e26d50dc26?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDg5fHxzaG9wcGluZyUyMGJhZ3xlbnwwfHx8fDE2OTY4MTc1OTN8MA&ixlib=rb-4.0.3&q=85')",
   'design-image-large':
-    "url('https://images.unsplash.com/photo-1691036562132-56a310d4b789?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5MjM0MjA5N3w&ixlib=rb-4.0.3&q=85')",
+    "url('https://images.unsplash.com/photo-1601924994987-69e26d50dc26?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDg5fHxzaG9wcGluZyUyMGJhZ3xlbnwwfHx8fDE2OTY4MTc1OTN8MA&ixlib=rb-4.0.3&q=85')",
 }
-
-/* Pinegrow generated Design Panel End */
-
-/* eslint-disable */
-/* prettier-disable */
-/* @ts-nocheck */
-
-const pg_font_urls = [
-  'https://fonts.googleapis.com/css?family=DM+Sans:400,500,700|Inter:100,200,300,400,500,600,700,800,900&display=swap',
-]
 
 const pg_background_urls = {
   'design-image':
-    'https://images.unsplash.com/photo-1691036562132-56a310d4b789?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5MjM0MjA5N3w&ixlib=rb-4.0.3&q=85',
+    'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDg5fHxzaG9wcGluZyUyMGJhZ3xlbnwwfHx8fDE2OTY4MTc1OTN8MA&ixlib=rb-4.0.3&q=85',
   'design-image-large':
-    'https://images.unsplash.com/photo-1691036562132-56a310d4b789?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5MjM0MjA5N3w&ixlib=rb-4.0.3&q=85',
+    'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDg5fHxzaG9wcGluZyUyMGJhZ3xlbnwwfHx8fDE2OTY4MTc1OTN8MA&ixlib=rb-4.0.3&q=85',
 }
 
 module.exports = {
@@ -247,3 +148,5 @@ module.exports = {
   pg_backgrounds,
   pg_background_urls,
 }
+
+/* Pinegrow generated Design Panel End */

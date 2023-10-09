@@ -2,7 +2,7 @@
   import { isDark, toggleDark } from '@/composables/dark'
 </script>
 <template>
-  <div class="mx-3">
+  <div>
     <UButton
       variant="ghost"
       class="!rounded-lg"

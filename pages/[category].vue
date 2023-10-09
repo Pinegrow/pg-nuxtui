@@ -1,0 +1,87 @@
+<script setup lang="ts">
+  const route = useRoute()
+  const { category } = route.params
+
+  const data = await useProducts()
+  const { products: productsRaw } = data.value
+
+  const { optimizeImage } = useOptimizeImage()
+  const products = productsRaw
+    .filter((product) => !category || product.category === category)
+    .map((product) => {
+      return {
+        ...product,
+        imageOptimized: optimizeImage(product.image),
+      }
+    })
+
+  const badges = [
+    ...new Set(
+      products
+        .filter((product) => product.badge)
+        .map((product) => product.badge),
+    ),
+  ]
+
+  const filteredBadges = useState('filteredBadges', () => {
+    return new Set()
+  })
+
+  const toggleFilter = (badge) => {
+    if (filteredBadges.value.has(badge)) {
+      filteredBadges.value.delete(badge)
+    } else {
+      filteredBadges.value.add(badge)
+    }
+  }
+
+  const filteredProducts = computed(() => {
+    if (filteredBadges.value.size) {
+      return products.filter((product) =>
+        filteredBadges.value.has(product.badge),
+      )
+    } else {
+      return products
+    }
+  })
+
+  definePageMeta({
+    title: 'Store',
+    navOrder: 2,
+  })
+
+  useHead({
+    title: 'Store',
+  })
+</script>
+<template>
+  <div class="pb-16">
+    <StoreHeader></StoreHeader>
+    <UContainer class="py-8">
+      <section
+        v-if="badges.length"
+        class="flex items-center justify-center m-4"
+      >
+        <span class="font-bold text-sm">Filter Badges</span>
+        <div class="ml-4 space-y-2">
+          <UButton
+            v-for="(badge, index) in badges"
+            :key="index"
+            :label="badge"
+            :variant="filteredBadges.has(badge) ? 'soft' : 'outline'"
+            class="mr-2"
+            @click="toggleFilter(badge)"
+          ></UButton>
+        </div>
+      </section>
+      <section data-pg-name="Products" class="flex flex-wrap justify-center">
+        <ProductCard
+          v-for="product in filteredProducts"
+          :key="product.id"
+          v-bind="product"
+        />
+      </section>
+    </UContainer>
+  </div>
+</template>
+<style scoped></style>
