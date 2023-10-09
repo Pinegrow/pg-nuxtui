@@ -40,12 +40,11 @@
           <ul
             class="-tracking-wide font-extrabold space-y-2 text-right uppercase w-full sm:space-y-0 lg:flex lg:flex-wrap lg:justify-center lg:space-x-2"
           >
-            <li>Vite</li>
-            <li>Nuxt</li>
-            <li>Iles</li>
-            <li>Astro</li>
-            <li class="whitespace-nowrap">Tailwind CSS</li>
-            <li>Vuetify</li>
+            <li>Fashion</li>
+            <li>Beauty</li>
+            <li>Kids</li>
+            <li>Summer</li>
+            <li class="whitespace-nowrap">Home</li>
             <li>& More</li>
           </ul>
         </div>

@@ -9,12 +9,12 @@
   })
 </script>
 <template>
-  <div>
-    <HeroSection></HeroSection>
+  <main>
+    <HeroSection />
     <UContainer class="pt-8">
       <LaunchSale class="mt-8" />
       <HotDeals class="mt-8" />
     </UContainer>
-  </div>
+  </main>
 </template>
 <style scoped></style>

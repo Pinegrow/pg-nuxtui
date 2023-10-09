@@ -23,7 +23,7 @@
 <template>
   <nav class="container mx-auto px-4">
     <div class="flex h-full items-center justify-between navbar-grid py-4">
-      <TheLogo />
+      <TheLogo style="grid-area: logo" />
       <div
         data-pg-name="Hamburger"
         style="grid-area: hamburger"

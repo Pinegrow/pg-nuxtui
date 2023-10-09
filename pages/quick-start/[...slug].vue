@@ -64,8 +64,6 @@
         </div>
       </div>
     </section>
-    <AboutTemplate></AboutTemplate>
-    <WalkThrough></WalkThrough>
   </div>
 </template>
 <style scoped></style>

@@ -56,7 +56,6 @@
 </script>
 <template>
   <div class="pb-16">
-    <StoreHeader></StoreHeader>
     <UContainer class="py-8">
       <section
         v-if="badges.length"

@@ -6,8 +6,8 @@
     >
       <NavBar />
       <slot />
+      <TheFooter />
     </div>
-    <TheFooter></TheFooter>
   </div>
 </template>
 <style></style>

@@ -1,12 +1,11 @@
 <script setup lang="ts">
   import { pg_background_urls } from '~~/themes/pg-tailwindcss/tokens.mjs'
 
-  const { optimizeImage, optimizeImages } = useOptimizeImage()
-
   const heroImageUrl =
     pg_background_urls['design-image-large'] ||
     pg_background_urls['design-image']
 
+  const { optimizeImage, optimizeImages } = useOptimizeImage()
   const heroImageOptimized = optimizeImage(heroImageUrl)
 
   // https://dev.to/ingosteinke/responsive-background-images-with-image-set-the-srcset-for-background-image-259a
@@ -37,17 +36,6 @@
       url("${responsiveHeroImages.value[1]}") 2x)`,
     }
   })
-
-  const avatarImageUrls = [
-    'https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDQyfHxwcm9maWxlfGVufDB8fHx8MTY4NzE2ODcyNnww&ixlib=rb-4.0.3&q=80&w=200',
-    'https://images.unsplash.com/photo-1573495612522-d994e72e5f56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDE4fHxhZnJpY2FuJTIwY29tcHV0ZXIlMjB3b21hbnxlbnwwfHx8fDE2ODcxNjg5NzV8MA&ixlib=rb-4.0.3&q=80&w=200',
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGF2YXRhcnxlbnwwfHx8fDE2OTUxMDA0OTV8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=40&h=40&fit=crop',
-    'https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDQyfHxwcm9maWxlfGVufDB8fHx8MTY4NzE2ODcyNnww&ixlib=rb-4.0.3&q=80&w=200',
-    'https://images.unsplash.com/photo-1573495612522-d994e72e5f56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDE4fHxhZnJpY2FuJTIwY29tcHV0ZXIlMjB3b21hbnxlbnwwfHx8fDE2ODcxNjg5NzV8MA&ixlib=rb-4.0.3&q=80&w=200',
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGF2YXRhcnxlbnwwfHx8fDE2OTUxMDA0OTV8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=40&h=40&fit=crop',
-  ]
-
-  const avatarImageUrlsOptimized = optimizeImages(avatarImageUrls, 'avatar')
 </script>
 <template>
   <section>
@@ -69,26 +57,17 @@
           class="-mx-4 flex flex-wrap items-center justify-center mt-24 space-y-6 lg:space-y-0"
         >
           <div class="px-4 text-center w-full md:w-8/12 xl:w-6/12">
-            <h4
-              class="font-bold font-serif mb-1 text-secondary-600 dark:text-secondary-200 uppercase"
+            <h3
+              class="dark:text-secondary-200 font-bold font-serif mb-1 text-secondary-600 uppercase lg:capitalize"
             >
-              Welcome to
-            </h4>
-            <h1 class="capitalize leading-tight mb-2 text-white">
-              Vue Designer
-            </h1>
-            <h5 class="mb-6 text-gray-50">
-              A desktop drag-and-drop editor for Mac, Windows and Linux that
-              lets you visually design your Vue apps.
-            </h5>
+              New Arrivals, Big Savings!
+            </h3>
             <UButton
-              label="Learn More!"
-              to="https://vuedesigner.com"
+              label="Shop Now"
+              to="/women"
               size="xl"
               trailing
-              trailing-icon="i-material-symbols-open-in-new"
-              target="_blank"
-              class="!rounded-3xl mt-4 px-6 py-4"
+              class="mt-4"
             >
             </UButton>
           </div>
