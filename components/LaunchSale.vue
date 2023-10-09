@@ -38,13 +38,13 @@
         </div>
         <div style="grid-area: categories" class="flex items-center">
           <ul
-            class="-tracking-wide font-extrabold space-y-2 text-right uppercase w-full sm:space-y-0 lg:flex lg:flex-wrap lg:justify-center lg:space-x-2"
+            class="-tracking-wide font-extrabold space-y-2 text-right uppercase w-full whitespace-nowrap sm:space-y-0 lg:flex lg:flex-wrap lg:justify-center lg:space-x-2"
           >
             <li>Fashion</li>
             <li>Beauty</li>
             <li>Kids</li>
             <li>Summer</li>
-            <li class="whitespace-nowrap">Home</li>
+            <li>Home</li>
             <li>& More</li>
           </ul>
         </div>

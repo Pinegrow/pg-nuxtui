@@ -23,7 +23,9 @@
 <template>
   <nav class="container mx-auto px-4">
     <div class="flex h-full items-center justify-between navbar-grid py-4">
-      <TheLogo style="grid-area: logo" />
+      <div style="grid-area: logo" class="flex justify-center">
+        <TheLogo />
+      </div>
       <div
         data-pg-name="Hamburger"
         style="grid-area: hamburger"
