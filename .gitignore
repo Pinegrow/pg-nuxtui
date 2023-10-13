@@ -8,6 +8,7 @@ node_modules
 dist
 .DS_Store
 .unlighthouse
+.netlify
 
 # Pinegrow
 _pgbackup

@@ -19,14 +19,19 @@ export const useNav = () => {
       return {
         text: route.meta.title,
         link: route.path,
+        icon: route.meta.icon,
+        type: route.meta.type,
       }
     })
 
   const navlinksFromConfig = site.nav
+  // TODO: Use navlinksFromConfig if using dynamic routes
   const navlinks = computed(() => navlinksFromConfig || navlinksFromRouter)
 
   const navlinksPrimary = computed(() => {
-    return navlinks.value.filter((navlink) => navlink.type === 'primary')
+    return navlinks.value.filter(
+      (navlink) => !navlink.type || navlink.type === 'primary',
+    )
   })
 
   const navlinksSecondary = computed(() => {

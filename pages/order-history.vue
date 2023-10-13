@@ -1,7 +1,12 @@
 <script setup lang="ts">
   definePageMeta({
     // layout: 'default',
+    // name: 'order-history',
+    // path: 'order-history',
+    // alias: 'order-history',
     title: 'Order History',
+    navOrder: '8',
+    type: 'secondary',
   })
 </script>
 

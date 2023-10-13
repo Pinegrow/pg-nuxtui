@@ -1,5 +1,10 @@
 <script setup lang="ts">
   const route = useRoute()
+  const capitalize = (s) => (s && s[0].toUpperCase() + s.slice(1)) || ''
+  useHead({
+    title: () => capitalize(route.params.category),
+  })
+
   const { category } = route.params
 
   const data = await useProducts()
@@ -43,15 +48,6 @@
     } else {
       return products
     }
-  })
-
-  definePageMeta({
-    title: 'Store',
-    navOrder: 2,
-  })
-
-  useHead({
-    title: 'Store',
   })
 </script>
 <template>

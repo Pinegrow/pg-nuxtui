@@ -16,10 +16,6 @@
     })
 
   const productsWithBadges = products.filter((product) => product.badge)
-
-  useHead({
-    title: 'Store',
-  })
 </script>
 <template>
   <div>

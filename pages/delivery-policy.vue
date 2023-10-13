@@ -1,7 +1,12 @@
 <script setup lang="ts">
   definePageMeta({
     // layout: 'default',
+    // name: 'delivery-policy',
+    // path: 'delivery-policy',
+    // alias: 'delivery-policy',
     title: 'Delivery Policy',
+    navOrder: '10',
+    type: 'secondary',
   })
 </script>
 

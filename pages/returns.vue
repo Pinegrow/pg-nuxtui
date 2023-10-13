@@ -1,7 +1,12 @@
 <script setup lang="ts">
   definePageMeta({
     // layout: 'default',
+    // name: 'returns',
+    // path: 'returns',
+    // alias: 'returns',
     title: 'Returns',
+    navOrder: '9',
+    type: 'secondary',
   })
 </script>
 

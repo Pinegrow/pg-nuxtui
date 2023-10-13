@@ -1,7 +1,12 @@
 <script setup lang="ts">
   definePageMeta({
     // layout: 'default',
-    title: 'Help Faqs',
+    // name: 'help-faqs',
+    // path: 'help-faqs',
+    // alias: 'help-faqs',
+    title: 'Help & FAQs',
+    navOrder: '12',
+    type: 'secondary',
   })
 </script>
 <template>
