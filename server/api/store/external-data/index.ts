@@ -33,7 +33,7 @@ export default defineEventHandler(async (/*event*/): Promise<Store> => {
   // If products exists, don't refetch them
   // Remove this if we want to always fetch refresh data from the source
   if (products) {
-    return { products, categories }
+    return { products, categories, badges }
   }
 
   // Fakestoreapi doesn't include badges & free shipping fields, so we randomly add those fields to the rawProducts and enrich it
@@ -71,5 +71,6 @@ export default defineEventHandler(async (/*event*/): Promise<Store> => {
   return {
     products,
     categories,
+    badges,
   }
 })
