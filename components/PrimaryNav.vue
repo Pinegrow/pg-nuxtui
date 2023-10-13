@@ -1,21 +1,6 @@
 <script setup lang="ts">
-  const { navlinksPrimary, navlinksSecondary, currentPath } = useNav()
-
-  // const props = defineProps({
-  // 	name: {
-  // 		type: String,
-  // 		default: 'PrimaryNav',
-  // 	},
-  // })
-
-  // const emit = defineEmits(['addToCart'])
-
-  // // Use the addToCart function like this:
-  // // Eg-1: addToCart('pizza', 10)
-  // // Eg-2: (event) => addToCart('pizza', 10, event)
-  // const addToCart = (item, quantity /*, event*/) => {
-  // 	emit('addToCart', { item, quantity })
-  // }
+  const { navlinksPrimary } = useNav()
+  const { isMobileMenuOpen } = useMobileMenu()
 </script>
 <template>
   <div
@@ -32,6 +17,7 @@
       color="gray"
       active-class="text-primary underline"
       exact
+      @click="isMobileMenuOpen = false"
       >{{ navlink.text }}</ULink
     >
   </div>
