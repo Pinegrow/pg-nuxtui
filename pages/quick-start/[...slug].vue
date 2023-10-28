@@ -1,27 +1,36 @@
 <script setup lang="ts">
-  const slug = useRoute().params.slug.toString().replace(/,/g, '/')
-  const { data: post } = await useAsyncData(slug, () => {
-    return queryContent(slug).findOne()
+  import site from '@/site'
+  const { github } = site
+
+  definePageMeta({
+    // layout: 'default',
+    name: 'quick-start',
+    // alias: '[...slug]',
+    title: 'Quick Start',
+    description: `Start Strong, Start Fast: Your Quick Launch Guide!`,
+    navOrder: '2',
+    type: 'primary',
+    icon: 'i-mdi-home',
   })
 
-  useHead({
-    title: post.value.title,
-  })
+  const slug =
+    useRoute().params.slug.toString().replace(/,/g, '/') ||
+    useRoute().name.toString().replace(/,/g, '/')
 </script>
 <template>
-  <div class="pb-12">
+  <div>
     <TheHeader>
       <div>
         <div class="flex items-center">
-          <h2 class="text-5xl">Quick Start</h2>
+          <h2 class="text-5xl font-semibold">Quick Start</h2>
         </div>
-        <div class="flex items-center mt-2">
-          <h6 class="mt-2">Github repo for this template</h6>
+        <div class="flex items-center mt-4">
+          <h6>Github repo for this template</h6>
           <UButton
             size="xs"
             class="ml-2"
             color="secondary"
-            to="https://github.com/pinegrow/pg-nuxtui"
+            :to="github"
             target="_blank"
             ><span>Click here</span>
           </UButton>
@@ -29,8 +38,8 @@
         <slot />
       </div>
     </TheHeader>
-    <section>
-      <div class="container mx-auto px-10 w-full">
+    <section class="container mx-auto">
+      <div class="px-10 w-full">
         <div class="flex flex-col rounded-lg">
           <article
             class="dark:xl:divide-gray-700 xl:divide-gray-200 xl:divide-y"
@@ -42,16 +51,7 @@
               <div
                 class="dark:divide-gray-700 divide-gray-200 divide-y xl:col-span-3 xl:pb-0 xl:row-span-2"
               >
-                <div
-                  id="post"
-                  class="dark:prose-invert dark:prose-gray-100 flex flex-col heading-offset max-w-none prose prose-gray-800 rounded-lg"
-                >
-                  <ContentRenderer id="content" :value="post">
-                    <template #empty>
-                      <p>No content found.</p>
-                    </template>
-                  </ContentRenderer>
-                </div>
+                <StaticMarkdown :path="slug" />
               </div>
             </div>
           </article>

@@ -2,11 +2,12 @@
   definePageMeta({
     // layout: 'default',
     // name: 'help-faqs',
-    // path: 'help-faqs',
     // alias: 'help-faqs',
     title: 'Help & FAQs',
+    description: `We're Here to Help: Your Support Hub!`,
     navOrder: '12',
     type: 'secondary',
+    icon: 'i-mdi-home',
   })
 </script>
 <template>

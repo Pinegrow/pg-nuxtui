@@ -14,8 +14,8 @@
 </script>
 <template>
   <div class="aspect-auto relative">
-    <img src="/stars.webp" class="absolute inset-0" aria-hidden="true" />
-    <img
+    <NuxtImg src="/stars.webp" class="absolute inset-0" aria-hidden="true" />
+    <NuxtImg
       src="/stars-filled.webp"
       class="absolute inset-0"
       aria-hidden="true"

@@ -2,11 +2,12 @@
   definePageMeta({
     // layout: 'default',
     // name: 'returns',
-    // path: 'returns',
     // alias: 'returns',
     title: 'Returns',
+    description: `Seamless Returns, Your Satisfaction Guaranteed!`,
     navOrder: '9',
     type: 'secondary',
+    icon: 'i-mdi-home',
   })
 </script>
 

@@ -15,7 +15,7 @@
         <TheHamburger @click="isMobileMenuOpen = true"></TheHamburger>
       </div>
       <div
-        data-pg-name="PrimaryDesktopNav"
+        data-pg-name="NavBarPrimary"
         style="grid-area: primary-nav"
         class="hidden sm:flex"
       >
@@ -38,7 +38,7 @@
     </div>
     <USlideover
       v-model="isMobileMenuOpen"
-      data-pg-name="PrimaryMobileNav"
+      data-pg-name="NavBarSecondary"
       style="grid-area: primary-nav"
       class="w-80 sm:hidden"
       side="left"

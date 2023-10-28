@@ -1,6 +1,19 @@
 <script setup lang="ts">
+  definePageMeta({
+    // layout: 'default',
+    // name: 'index',
+    // alias: 'index',
+    title: 'Home',
+    description: 'New Arrivals, Big Savings!',
+    hidden: true,
+    navOrder: 1,
+    type: 'primary',
+    icon: 'i-mdi-home',
+  })
+
   const route = useRoute()
   const capitalize = (s) => (s && s[0].toUpperCase() + s.slice(1)) || ''
+
   useHead({
     title: () => capitalize(route.params.category),
   })
@@ -28,7 +41,10 @@
     ),
   ]
 
-  const filteredBadges = useState('filteredBadges', () => {
+  // const filteredBadges = useState('filteredBadges', () => {
+  //   return new Set()
+  // })
+  const filteredBadges = useState(category.toString(), () => {
     return new Set()
   })
 

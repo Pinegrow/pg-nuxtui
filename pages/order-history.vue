@@ -2,11 +2,12 @@
   definePageMeta({
     // layout: 'default',
     // name: 'order-history',
-    // path: 'order-history',
     // alias: 'order-history',
     title: 'Order History',
+    description: `Your Purchase Journey, Your Order History!`,
     navOrder: '8',
     type: 'secondary',
+    icon: 'i-mdi-home',
   })
 </script>
 

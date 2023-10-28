@@ -8,15 +8,8 @@
 </script>
 <template>
   <div class="overflow-hidden max-h-40">
-    <!-- <img
-      height="200"
-      cover
-      :src="headerImageOptimized.imageSrc"
-      :sizes="headerImageOptimized.imageSizes.sizes"
-      :srcset="headerImageOptimized.imageSizes.srcset"
-      class="md:-mt-60"
-    /> -->
-    <img height="200" cover :src="headerImageUrl" class="md:-mt-60" />
+    <NuxtImg height="200" cover :src="headerImageUrl" class="md:-mt-60" />
+    <!-- <img height="200" cover :src="headerImageUrl" class="md:-mt-60" /> -->
   </div>
 </template>
 <style scoped></style>

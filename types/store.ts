@@ -1,4 +1,4 @@
-import { ImageOptimized } from './image'
+import type { ImageOptimized } from './image'
 
 type Rating = {
   rate: number

@@ -5,27 +5,34 @@ export const useNav = () => {
   const routes = useRouter().getRoutes()
 
   const navlinksFromRouter = routes
+    // Remove hidden routes
+    .filter((route) => route.meta.hidden !== true)
     // Filter out routes starting with upper-case, for eg, NotFoundInDev
     .filter(
       (route) => route.name && route.name[0] !== route.name[0].toUpperCase(),
     )
     // Remove dynamic routes
-    .filter((route) => !route.path.includes(':'))
+    // .filter((route) => !route.path.includes(':'))
     // Include only ones that has a title (which are defined via definePageMeta in pages)
     .filter((route) => route.meta.title)
     .filter((route) => route.path !== '/try-now')
-    .sort((a, b) => (a.meta.navOrder > b.meta.navOrder ? 1 : -1))
+    .sort((a, b) =>
+      a.meta.navOrder && b.meta.navOrder && a.meta.navOrder > b.meta.navOrder
+        ? 1
+        : -1,
+    )
     .map((route) => {
       return {
         text: route.meta.title,
-        link: route.path,
+        link: route.meta.name || route.path,
         icon: route.meta.icon,
         type: route.meta.type,
       }
     })
 
   const navlinksFromConfig = site.nav
-  // TODO: Use navlinksFromConfig if using dynamic routes
+  // const navlinks = computed(() => navlinksFromRouter || navlinksFromConfig)
+  // TODO: Use navlinksFromConfig if using dynamic routes, or customized nav-links
   const navlinks = computed(() => navlinksFromConfig || navlinksFromRouter)
 
   const navlinksPrimary = computed(() => {

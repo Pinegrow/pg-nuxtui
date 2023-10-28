@@ -1,4 +1,16 @@
 <script setup lang="ts">
+  definePageMeta({
+    // layout: 'default',
+    name: 'store',
+    // alias: '[...slug]',
+    title: 'Store',
+    description: `Shop 'til You Drop: Your E-Commerce Haven!`,
+    navOrder: '3',
+    hidden: true,
+    type: 'primary',
+    icon: 'i-mdi-home',
+  })
+
   const route = useRoute()
   const { id: productId } = route.params
 
@@ -13,8 +25,12 @@
     }
   })
 
+  useServerSeoMeta({
+    description: () => product.value?.title || '',
+  })
+
   useHead({
-    title: computed(() => product.value?.title || ''),
+    title: () => product.value?.title || '',
   })
 
   const colors = [
@@ -46,12 +62,8 @@
   <section class="mx-4 my-16 product-details">
     <div class="flex justify-center max-h-96 xl:max-h-[600px]">
       <div class="-m-4 bg-white p-8 rounded-lg">
-        <!-- <img
-          :src="product.imageOptimized.imageSrc"
-          :sizes="product.imageOptimized.imageSizes.sizes"
-          class="max-h-full"
-        /> -->
-        <img :src="product.image" class="max-h-full" />
+        <NuxtImg :src="product.image" class="max-h-full" />
+        <!-- <img :src="product.image" class="max-h-full" /> -->
       </div>
     </div>
     <div class="mt-8 md:mt-0 md:mx-8">

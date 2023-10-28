@@ -1,55 +1,37 @@
 <script setup lang="ts">
-  import { pg_background_urls } from '~~/themes/pg-tailwindcss/tokens.mjs'
+  import { heroImageUrl } from '@/utils/hero'
 
-  const heroImageUrl =
-    pg_background_urls['design-image-large'] ||
-    pg_background_urls['design-image']
+  const { optimizeImage } = useOptimizeImage()
+  const heroImageOptimized = {
+    alt: `hero`,
+    cover: true,
+    ...optimizeImage(
+      heroImageUrl,
+      /* options */
+      {
+        /* If using local images instead of unsplash url, enable netlify provider */
+        // provider:
+        //     process.env.NODE_ENV === 'production'
+        //       ? 'netlify'
+        //       : null /* defaults to ipx or ipxStatic */,
+        placeholder: false, // placeholder image before the actual image is fully loaded.
+      },
+      true /* return bgStyles */,
+    ),
+  }
 
-  const { optimizeImage, optimizeImages } = useOptimizeImage()
-  const heroImageOptimized = optimizeImage(heroImageUrl)
-
-  // https://dev.to/ingosteinke/responsive-background-images-with-image-set-the-srcset-for-background-image-259a
-  const responsiveHeroImages = computed(() => {
-    return heroImageOptimized.imageSizes.srcset
-      .split(', ')
-      .filter((imgUrl) => imgUrl.endsWith('768w') || imgUrl.endsWith('2560w'))
-  })
-
-  const responsiveHeroImageSrc = computed(() => {
-    return {
-      'background-image': `url("${responsiveHeroImages.value[0]}")`,
-    }
-  })
-
-  const responsiveHeroImageSrcImageSet = computed(() => {
-    return {
-      'background-image': `image-set(
-      url("${responsiveHeroImages.value[0]}") 1x,
-      url("${responsiveHeroImages.value[1]}") 2x)`,
-    }
-  })
-
-  const responsiveHeroImageSrcImageSetFallback = computed(() => {
-    return {
-      'background-image': `-webkit-image-set(
-      url("${responsiveHeroImages.value[0]}") 1x,
-      url("${responsiveHeroImages.value[1]}") 2x)`,
-    }
-  })
+  const heroImage = heroImageOptimized.src
+  const bgStyles = heroImageOptimized.bgStyles
 </script>
 <template>
   <section>
-    <!-- <div
-      class="bg-center bg-cover bg-no-repeat blur-none z-0"
-      :style="[
-        responsiveHeroImageSrc,
-        responsiveHeroImageSrcImageSet,
-        responsiveHeroImageSrcImageSetFallback,
-      ]"
-    > -->
     <div
-      class="bg-center bg-cover bg-no-repeat blur-none z-0 bg-design-image lg:bg-design-image-large"
+      class="bg-center bg-cover bg-no-repeat blur-none z-0"
+      :style="bgStyles"
     >
+      <!-- <div
+      class="bg-center bg-cover bg-no-repeat blur-none z-0 bg-design-image lg:bg-design-image-large"
+    > -->
       <div
         class="pb-36 pt-2 px-6 relative rounded-3xl md:pb-48 lg:pb-72 lg:px-12"
       >

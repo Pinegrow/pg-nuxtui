@@ -2,11 +2,12 @@
   definePageMeta({
     // layout: 'default',
     // name: 'delivery-policy',
-    // path: 'delivery-policy',
     // alias: 'delivery-policy',
     title: 'Delivery Policy',
+    description: `Delivering Promises, One Policy at a Time!`,
     navOrder: '10',
     type: 'secondary',
+    icon: 'i-mdi-home',
   })
 </script>
 
