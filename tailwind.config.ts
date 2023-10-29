@@ -3,6 +3,7 @@ import {
   pg_fonts,
   pg_backgrounds,
 } from './themes/pg-tailwindcss/tokens.cjs'
+import { getFontsWithFallback } from './utils/font'
 
 export default {
   darkMode: 'class',
@@ -11,7 +12,7 @@ export default {
     require('@tailwindcss/forms'),
     require('@pinegrow/tailwindcss-plugin').default({
       // colors: { ...pg_colors, pp: pg_colors.primary }, // pp, primary, secondary etc
-      fonts: pg_fonts,
+      fonts: getFontsWithFallback(pg_fonts),
       backgrounds: pg_backgrounds, // bg-design-image, bg-design-image-large
     }),
   ],

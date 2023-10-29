@@ -1,13 +1,18 @@
+<script setup lang="ts">
+  //...
+</script>
+
 <template>
-  <div>
-    <MetaTags />
-    <div
-      class="flex flex-col bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-50 min-h-screen"
-    >
-      <!-- <NavBar /> -->
+  <!-- <div class="container mx-auto"> -->
+  <div
+    class="min-h-screen flex flex-col bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-50"
+  >
+    <!-- <NavBar /> -->
+    <main>
       <slot />
-    </div>
-    <!-- <TheFooter></TheFooter> -->
+    </main>
+    <!-- <TheFooter /> -->
   </div>
+  <!-- </div> -->
 </template>
 <style></style>
