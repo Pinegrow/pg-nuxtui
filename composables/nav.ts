@@ -17,7 +17,7 @@ export const useNav = () => {
     .filter((route) => route.meta.title)
     .filter((route) => route.path !== '/try-now')
     .sort((a, b) =>
-      a.meta.navOrder && b.meta.navOrder && a.meta.navOrder > b.meta.navOrder
+      a.meta.navOrder && b.meta.navOrder && +a.meta.navOrder > +b.meta.navOrder
         ? 1
         : -1,
     )
