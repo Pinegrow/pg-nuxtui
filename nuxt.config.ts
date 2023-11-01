@@ -245,6 +245,14 @@ export default defineNuxtConfig({
     },
   },
 
+  // unocss: {
+  //   presets: [
+  //     presetIcons({
+  //       prefix: 'i-', // default prefix, do not change
+  //     }),
+  //   ],
+  // },
+
   pinegrow: {
     liveDesigner: {
       iconPreferredCase: 'unocss', // default value (can be removed), Nuxt UI uses the unocss format for icon names
