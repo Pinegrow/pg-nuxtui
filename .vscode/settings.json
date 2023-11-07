@@ -7,6 +7,10 @@
   "eslint.validate": ["javascript", "javascriptreact", "vue"],
   "typescript.tsdk": "node_modules/typescript/lib",
   "search.exclude": {
-    "**/_pgbackup": true
+    "**/_pgbackup": true,
+    ".nuxt": true,
+    ".output": true,
+    "dist": true,
+    ".unlighthouse": true
   }
 }
