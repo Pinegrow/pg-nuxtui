@@ -103,7 +103,8 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 ### Nuxt UI configuration
 
 - 👉 Nuxt UI uses heroicons by default and is configured only to use them. In order to use all iconsets in Vue Designer's icon-picker, the `ui` key of the Nuxt config has been updated (`icons: 'all'`).
-- Also, note that there are some scenarios when colors might have to be added to the `safelistColors` array under the `ui` key. For more details, refer to the official [documentation](https://ui.nuxt.com/getting-started/theming#colors).
+- 👉 Nuxt UI by default uses `dark` mode. It's changed to `light` mode using `colorMode > preference` in `nuxt.config.ts`.
+- 👉 There are some scenarios when colors might have to be added to the `safelistColors` array under the `ui` key. For more details, refer to the official [documentation](https://ui.nuxt.com/getting-started/theming#colors).
 
   ```ts
   // nuxt.config.ts

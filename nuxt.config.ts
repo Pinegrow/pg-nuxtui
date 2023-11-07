@@ -46,6 +46,10 @@ export default defineNuxtConfig({
     'nuxt-icon',
   ],
 
+  colorMode: {
+    preference: 'light',
+  },
+
   ui: {
     icons: 'all',
     // safelistColors: [
