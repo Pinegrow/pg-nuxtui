@@ -14,6 +14,9 @@ const {
 } = site
 
 export default defineNuxtConfig({
+  extends: [
+    './my-layer', // NavBar and Footer components
+  ],
   // ssr: false,
   devtools: { enabled: false }, // Disable when using Vue devtools
 

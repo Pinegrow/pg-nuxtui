@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { useMobileMenu } from '@/composables/mobile-menu'
   const { isMobileMenuOpen, openMobileMenu } = useMobileMenu()
 </script>
 <template>
