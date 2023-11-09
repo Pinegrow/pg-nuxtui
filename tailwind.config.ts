@@ -27,13 +27,13 @@ export default {
 
   get content() {
     const _content = [
-      './components/**/*.{js,vue,ts}',
-      './layouts/**/*.vue',
-      './pages/**/*.vue',
-      './plugins/**/*.{js,ts}',
-      './nuxt.config.{js,ts}',
-      './app.vue',
-      '*.{mjs,js,ts}',
+      '{.,*-layer}/components/**/*.{js,vue,ts}',
+      '{.,*-layer}/layouts/**/*.vue',
+      '{.,*-layer}/pages/**/*.vue',
+      '{.,*-layer}/plugins/**/*.{js,ts}',
+      '{.,*-layer}/nuxt.config.{js,ts}',
+      '{.,*-layer}/app.vue',
+      '{.,*-layer}/*.{mjs,js,ts}',
     ]
     return process.env.NODE_ENV === 'production'
       ? _content
