@@ -265,16 +265,6 @@ export default defineNuxtConfig({
   //       prefix: 'i-', // default prefix, do not change
   //     }),
   //   ],
-  //   content: {
-  //     pipeline: {
-  //       include: [
-  //         /\.(vue|svelte|[jt]sx|mdx?|astro|elm|php|phtml|html)($|\?)/, // the default
-  //         './*.{js,cjs,ts,cts,mts}', // site.ts
-  //         '*/**/*.{js,cjs,ts,cts,mts}', // nuxt directories
-  //         '*-layer/**/*.{js,cjs,ts,cts,mts}', // nuxt layers
-  //       ],
-  //     },
-  //   },
   // },
 
   pinegrow: {
