@@ -265,6 +265,14 @@ export default defineNuxtConfig({
   //       prefix: 'i-', // default prefix, do not change
   //     }),
   //   ],
+  //   content: {
+  //     pipeline: {
+  //       include: [
+  //         './*.{js,cjs,ts,cts,mts}', // site.ts
+  //         '*/**/*.{js,cjs,ts,cts,mts}',
+  //       ],
+  //     },
+  //   },
   // },
 
   pinegrow: {
