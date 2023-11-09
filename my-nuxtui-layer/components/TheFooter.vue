@@ -1,10 +1,5 @@
 <script setup lang="ts">
-  // const props = defineProps({
-  // 	name: {
-  // 		type: String,
-  // 		default: 'TheFooter',
-  // 	},
-  // })
+  // ...
 </script>
 <template>
   <footer class="pb-24 pt-12">

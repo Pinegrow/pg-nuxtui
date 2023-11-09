@@ -12,14 +12,14 @@
         style="grid-area: hamburger"
         class="sm:hidden"
       >
-        <TheHamburger @click="isMobileMenuOpen = true"></TheHamburger>
+        <NavHamburger @click="isMobileMenuOpen = true"></NavHamburger>
       </div>
       <div
         data-pg-name="NavBarPrimary"
         style="grid-area: primary-nav"
         class="hidden sm:flex"
       >
-        <PrimaryNav class="sm:w-full" />
+        <NavPrimary class="sm:w-full" />
       </div>
       <div data-pg-name="Searchbox" style="grid-area: search">
         <UFormGroup hint="Optional">
@@ -33,7 +33,7 @@
       </div>
       <div data-pg-name="Profile" class="flex space-x-1">
         <ProfileActions class="!hidden sm:!flex" />
-        <SecondaryNav />
+        <NavSecondary />
       </div>
     </div>
     <USlideover
@@ -43,7 +43,7 @@
       class="w-80 sm:hidden"
       side="left"
     >
-      <PrimaryNav class="m-4" />
+      <NavPrimary class="m-4" />
     </USlideover>
   </nav>
 </template>

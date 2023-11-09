@@ -15,7 +15,14 @@ const {
 
 export default defineNuxtConfig({
   extends: [
-    './my-layer', // NavBar and Footer components
+    './my-nuxtui-layer', // NavBar and Footer components
+  ],
+  components: [
+    {
+      path: '~/components/OgImage',
+      island: true,
+    },
+    '~/components',
   ],
   // ssr: false,
   devtools: { enabled: false }, // Disable when using Vue devtools
