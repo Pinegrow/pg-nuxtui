@@ -8,7 +8,7 @@
   }
 }
 
-@layer base {
+/* @layer base {
   h1 {
     @apply text-4xl font-bold md:text-5xl lg:text-6xl  tracking-tight;
   }
@@ -34,4 +34,4 @@
   textarea {
     @apply text-black;
   }
-}
+} */
