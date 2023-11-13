@@ -14,7 +14,7 @@ export const useProducts = async () => {
     })
   }
 
-  const fetchCategory = (category: string) => {
+  const fetchCategory = (category?: string) => {
     // // Optimize any image urls in the data contents
     // const { optimizeImage } = useOptimizeImage()
 
