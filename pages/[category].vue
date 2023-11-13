@@ -19,6 +19,10 @@
     title: () => capitalize(route.params.category),
   })
 
+  useServerSeoMeta({
+    description: () => capitalize(route.params.category),
+  })
+
   const { category } = route.params
 
   const { fetchCategory } = await useProducts()

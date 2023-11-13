@@ -23,6 +23,10 @@
     title: title || '',
   })
 
+  useServerSeoMeta({
+    description: () => description || '',
+  })
+
   const colors = [
     {
       id: 1,

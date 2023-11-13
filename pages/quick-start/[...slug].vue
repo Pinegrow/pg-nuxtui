@@ -17,6 +17,10 @@
   const slug =
     useRoute().params.slug.toString().replace(/,/g, '/') ||
     useRoute().name.toString().replace(/,/g, '/')
+
+  useServerSeoMeta({
+    description: () => slug || '',
+  })
 </script>
 <template>
   <div>
