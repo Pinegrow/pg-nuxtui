@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import type { Product } from '../types/store'
-  const { id, title, price, image, imageOptimized, badge, shipping } =
-    defineProps<Product>()
+  const { id, title, price, image, badge, shipping } = defineProps<Product>()
 </script>
 <template>
   <NuxtLink

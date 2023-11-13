@@ -15,23 +15,12 @@
   const route = useRoute()
   const { id: productId } = route.params
 
-  const productRaw = await useProduct(+productId)
-
-  const { optimizeImage } = useOptimizeImage()
-
-  const product = computed(() => {
-    return {
-      ...productRaw.value,
-      imageOptimized: optimizeImage(productRaw.value.image),
-    }
-  })
-
-  useServerSeoMeta({
-    description: () => product.value?.title || '',
-  })
+  const { fetchProduct } = await useProduct(+productId)
+  const { title, price, description, image, rating, badge, shipping } =
+    fetchProduct()
 
   useHead({
-    title: () => product.value?.title || '',
+    title: title || '',
   })
 
   const colors = [
@@ -63,43 +52,36 @@
   <section class="mx-4 my-16 product-details">
     <div class="flex justify-center max-h-96 xl:max-h-[600px]">
       <div class="-m-4 bg-white p-8 rounded-lg">
-        <NuxtImg :src="product.image" class="max-h-full" />
-        <!-- <img :src="product.image" class="max-h-full" /> -->
+        <NuxtImg :src="image" class="max-h-full" />
+        <!-- <img :src="image" class="max-h-full" /> -->
       </div>
     </div>
     <div class="mt-8 md:mt-0 md:mx-8">
       <div class="relative">
-        <UBadge
-          v-if="product.badge"
-          :label="product.badge"
-          class="-top-7 absolute"
-        ></UBadge>
-        <h3>{{ product.title }}</h3>
+        <UBadge v-if="badge" :label="badge" class="-top-7 absolute"></UBadge>
+        <h3>{{ title }}</h3>
       </div>
       <div class="flex items-center justify-between mt-2">
         <div class="flex">
           <div>
-            <StarsRate
-              class="mt-0.5 w-24"
-              :value="product.rating.rate"
-            ></StarsRate>
+            <StarsRate class="mt-0.5 w-24" :value="rating.rate"></StarsRate>
           </div>
           <div class="ml-2">
-            <div class="text-sm">{{ product.rating.count }} reviews</div>
+            <div class="text-sm">{{ rating.count }} reviews</div>
           </div>
         </div>
         <div class="md:mr-4">
           <span class="dark:text-primary-400 text-primary-500 text-xs">{{
-            product.shipping
+            shipping
           }}</span>
         </div>
       </div>
       <div
-        v-if="product.badge || product.shipping"
+        v-if="badge || shipping"
         class="flex items-center justify-between mt-4"
       >
         <div>
-          <span class="font-bold text-xl">${{ product.price }}</span>
+          <span class="font-bold text-xl">${{ price }}</span>
         </div>
         <div class="md:mr-4"><span>Best Deals Inc.</span></div>
       </div>
@@ -124,7 +106,7 @@
         </div>
       </div>
       <div class="mt-8">
-        <span>{{ product.description }}</span>
+        <span>{{ description }}</span>
       </div>
     </div>
   </section>
