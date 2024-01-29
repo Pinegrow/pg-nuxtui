@@ -15,6 +15,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "analyze": "nuxt analyze",
     "vue-devtools": "vue-devtools",
     "lint": "npm run lint:fix && npm run format",
     "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",

@@ -52,6 +52,19 @@ Open your project in Vue Designer and follow the instructions displayed in the C
 npm run dev
 ```
 
+### Build
+
+```bash
+npm run build # SPA SSR,
+npm run generate # SPA SSG (full-static)
+```
+
+### Analyze
+
+```bash
+npm run analyze # bundle sizes
+```
+
 ### Preview
 
 ```bash
@@ -63,15 +76,6 @@ npm run now # build & preview
 ```bash
 npm run unlighthouse # Uses npx unlighthouse from https://unlighthouse.dev/ to run lighthouse on entire site (all pages)
 ```
-
-### Build
-
-```bash
-npm run build # SPA SSR
-npm run generate # SPA SSG (full-static)
-```
-
-And you will see the generated file in `dist` that's ready to be served.
 
 ### Deploy to Netlify
 

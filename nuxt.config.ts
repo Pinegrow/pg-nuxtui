@@ -263,7 +263,7 @@ export default defineNuxtConfig({
   pinegrow: {
     liveDesigner: {
       iconPreferredCase: 'unocss', // default value (can be removed), Nuxt UI uses the unocss format for icon names
-      devtoolsKey: 'devtools', // see plugins/devtools.client.ts
+      devtoolsKey: 'devtoolsKey', // see plugins/devtools.client.ts
       tailwindcss: {
         /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
         configPath: 'tailwind.config.ts',

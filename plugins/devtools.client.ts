@@ -5,6 +5,6 @@ export default defineNuxtPlugin(() => {
   //   // devtools.connect(/* host, port */)
   //   // (window as any) = devtools
   //   // @ts-ignore
-  //   window.devtools = devtools
+  //   window.devtoolsKey = devtools
   // }
 })
