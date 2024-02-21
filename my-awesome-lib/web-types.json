@@ -123,9 +123,18 @@
       ],
       "attributes": [
         {
-          "name": "color",
+          "name": "color-demo",
+          "description": "Note, this is not a global prop, added here just to show an example of how it is defined in web-types.",
           "customType": "select",
-          "options": []
+          "options": [
+            "primary",
+            "secondary",
+            "tertiary",
+            "success",
+            "warning",
+            "error",
+            "info"
+          ]
         }
       ]
     }
