@@ -1,0 +1,27 @@
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+.DS_Store
+.unlighthouse
+.netlify
+
+# Pinegrow
+_pgbackup
+_pginfo
+
+## optional
+pinegrow.json
+
+## optional
+## Uncomment the below as per your needs
+## add any d.ts files that are auto-generated, for eg,
+auto-imports.d.ts
+components.d.ts
+composables.d.ts
+## rollup visualizer
+stats.html
