@@ -1,4 +1,4 @@
-import type { Store, Products } from '@/types/store'
+import type { Store, Products } from '~~/types/store'
 
 export let products: Products
 let categories: string[] = []
