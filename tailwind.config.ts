@@ -3,7 +3,7 @@ import {
   pg_fonts,
   pg_backgrounds,
 } from './themes/pg-tailwindcss/tokens.cjs'
-import { getFontsWithFallback } from './utils/font'
+import { getFontsWithFallback } from './app/utils/font'
 
 export default {
   darkMode: 'class',

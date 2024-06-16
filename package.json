@@ -39,7 +39,7 @@
     "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/html-validator": "^1.5.2",
     "@nuxtseo/module": "^2.0.0-beta.39",
-    "@pinegrow/nuxt-module": "^3.0.55",
+    "@pinegrow/nuxt-module": "^3.0.56",
     "@pinegrow/nuxtui-plugin": "^3.0.35",
     "@pinegrow/tailwindcss-plugin": "^3.0.20",
     "@tailwindcss/forms": "^0.5.3",

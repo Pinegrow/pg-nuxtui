@@ -1,4 +1,4 @@
-import type { Product, Products } from '@/types/store'
+import type { Product, Products } from '~~/types/store'
 import { products } from './index'
 products as Products
 
