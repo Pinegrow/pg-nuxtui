@@ -10,10 +10,10 @@
 
 /* @layer base {
   h1 {
-    @apply text-4xl font-bold md:text-5xl lg:text-6xl  tracking-tight;
+    @apply text-4xl font-extrabold leading-none tracking-tight mb-4 md:text-5xl xl:text-6xl;
   }
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4 scroll-mt-28;
+    @apply text-3xl font-extrabold md:text-4xl lg:text-5xl mb-4 scroll-mt-28;
   }
   h3 {
     @apply text-2xl md:text-3xl lg:text-4xl font-bold mb-2 scroll-mt-28;
@@ -22,7 +22,7 @@
     @apply text-xl md:text-2xl lg:text-3xl font-semibold mb-2 scroll-mt-28;
   }
   h5 {
-    @apply text-base md:text-lg lg:text-xl font-medium mb-2 scroll-mt-28;
+    @apply text-base md:text-lg lg:text-2xl font-medium mb-2 scroll-mt-28;
   }
   h6 {
     @apply text-sm md:text-base lg:text-lg font-medium mb-2 scroll-mt-28;

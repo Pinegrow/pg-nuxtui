@@ -4,7 +4,7 @@
 </script>
 <template>
   <ULink data-pg-name="Logo" class="flex items-center sm:flex-row" to="/">
-    <UIcon name="i-fluent-emoji-shopping-bags" class="text-4xl"></UIcon>
+    <UIcon name="i-fluent-emoji-shopping-bags" class="text-4xl" height="28px" />
     <h6
       class="text-primary-600 dark:text-primary-200 font-extrabold font-serif ml-2 mt-4 text-2xl"
     >

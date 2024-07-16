@@ -3,7 +3,7 @@ export default defineAppConfig({
     gray: 'neutral',
     primary: 'pp',
     button: {
-      rounded: 'rounded-3xl',
+      rounded: 'rounded-xl',
     },
   },
 })

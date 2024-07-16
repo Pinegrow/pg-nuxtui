@@ -6,7 +6,7 @@
   <div
     class="flex flex-col justify-center sm:space-y-0 space-y-4 sm:flex sm:flex-row sm:items-center sm:space-x-4"
   >
-    <TheLogo class="mb-6 sm:hidden"></TheLogo>
+    <TheLogo class="mb-6 sm:hidden" />
     <ULink
       v-for="(navlink, index) in navlinksPrimary"
       :key="index"

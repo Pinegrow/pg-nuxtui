@@ -1,6 +1,7 @@
 export const useProduct = async (productId: number) => {
-  // const { data, error } = await useFetch(
-  //   `/api/store/external-data/${productId}`)
+  // const { data: product, error } = await useFetch(
+  //   `/api/store/external-data/${productId}`,
+  // )
   const { data: product, error } = await useFetch(
     `/api/store/local-data/${productId}`,
   )
@@ -18,16 +19,15 @@ export const useProduct = async (productId: number) => {
   }
 
   const fetchProduct = () => {
-    // // Optimize any image urls in the data contents
-    // const { optimizeImage } = useOptimizeImage()
+    // Optimize any image urls in the data contents
+    const { optimizeImage } = useOptimizeImage()
 
-    // return product.value.image
-    //   ? {
-    //       ...product.value,
-    //       imageOptimized: optimizeImage(product.value.image),
-    //     }
-    //   : product.value
-    return product.value
+    return product.value.image
+      ? {
+          ...product.value,
+          imageOptimized: optimizeImage(product.value.image),
+        }
+      : product.value
   }
 
   return { product, fetchProduct }

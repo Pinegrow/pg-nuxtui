@@ -1,18 +1,19 @@
 import type { Store, Products } from '~~/types/store'
 
-export let products: Products
-let categories: string[] = []
+export const productData = {
+  products: <Products>[],
+  categories: [],
+  badges: [
+    'Low Stock',
+    'Selling Fast!',
+    'New!',
+    'Presale',
+    'Clearance',
+    'Get 10% OFF^',
+  ],
+}
 
 const apiBaseUrl = 'https://fakestoreapi.com'
-
-const badges = [
-  'Low Stock',
-  'Selling Fast!',
-  'New!',
-  'Presale',
-  'Clearance',
-  'Get 10% OFF^',
-]
 
 const idsOfFractionOfTheProductsArray = (products, fraction) => {
   return products
@@ -32,8 +33,8 @@ const getRandomItem = (items) => {
 export default defineEventHandler(async (/*event*/): Promise<Store> => {
   // If products exists, don't refetch them
   // Remove this if we want to always fetch refresh data from the source
-  if (products) {
-    return { products, categories, badges }
+  if (productData.products.length) {
+    return productData
   }
 
   // Fakestoreapi doesn't include badges & free shipping fields, so we randomly add those fields to the rawProducts and enrich it
@@ -55,22 +56,28 @@ export default defineEventHandler(async (/*event*/): Promise<Store> => {
     0.25,
   )
 
-  products = rawProducts.map((product) => ({
+  const matchers = {
+    [`men's clothing`]: 'men',
+    [`women's clothing`]: 'women',
+    [`jewelery`]: 'jewellery',
+  }
+
+  productData.products = rawProducts.map((product) => ({
     ...product,
+    category: matchers[product.category] || product.category,
     price: (+product.price).toFixed(2),
     badge: productIdsForBadges.includes(product.id)
-      ? getRandomItem(badges)
+      ? getRandomItem(productData.badges)
       : '',
     shipping: productIdsForFreeShipping.includes(product.id)
       ? 'Free Shipping'
       : '',
   }))
 
-  categories = await $fetch(`${apiBaseUrl}/products/categories`)
+  productData.categories = await $fetch(`${apiBaseUrl}/products/categories`)
+  productData.categories = productData.categories.map(
+    (category) => matchers[category],
+  )
 
-  return {
-    products,
-    categories,
-    badges,
-  }
+  return productData
 })

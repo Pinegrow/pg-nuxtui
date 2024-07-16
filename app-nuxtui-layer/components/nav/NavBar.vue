@@ -12,7 +12,7 @@
         style="grid-area: hamburger"
         class="sm:hidden"
       >
-        <NavHamburger @click="isMobileMenuOpen = true"></NavHamburger>
+        <NavHamburger @click="isMobileMenuOpen = true" />
       </div>
       <div
         data-pg-name="NavBarPrimary"

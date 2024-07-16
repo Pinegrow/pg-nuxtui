@@ -5,10 +5,6 @@
   // import { useSiteConfig } from '#imports'
   // const siteConfig = useSiteConfig()
 
-  // When building as a SSG (generate command) app, defineRobotMeta is used to create a meta tag to control indexing. For more details - https://nuxtseo.com/robots/guides/meta-tags
-  // TODO: Remove below defineRobotMeta if building as a SSR (build command) app
-  defineRobotMeta()
-
   const { name, logo, description, author, twitter } = site
   const fromBg = secondary
   const toBg = primary
