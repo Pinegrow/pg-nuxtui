@@ -77,7 +77,7 @@
             :variant="filteredBadges.has(badge) ? 'soft' : 'outline'"
             class="mr-2"
             @click="toggleFilter(badge)"
-          ></UButton>
+          />
         </div>
       </section>
       <section data-pg-name="Products" class="flex flex-wrap justify-center">

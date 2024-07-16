@@ -11,7 +11,6 @@
     // ogImage: 'images/ogImage.png', // url or local images inside public folder, for eg, ~/public/images/ogImage.png
   })
 </script>
-
 <template>
   <div
     style="
@@ -25,5 +24,4 @@
     <span style="color: #0198cd">track-order.vue (Nuxt 3.6)</span>
   </div>
 </template>
-
 <style scoped></style>

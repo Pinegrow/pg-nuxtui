@@ -62,13 +62,13 @@
     </div>
     <div class="mt-8 md:mt-0 md:mx-8">
       <div class="relative">
-        <UBadge v-if="badge" :label="badge" class="-top-7 absolute"></UBadge>
+        <UBadge v-if="badge" :label="badge" class="-top-7 absolute" />
         <h3>{{ title }}</h3>
       </div>
       <div class="flex items-center justify-between mt-2">
         <div class="flex">
           <div>
-            <StarsRate class="mt-0.5 w-24" :value="rating.rate"></StarsRate>
+            <StarsRate class="mt-0.5 w-24" :value="rating.rate" />
           </div>
           <div class="ml-2">
             <div class="text-sm">{{ rating.count }} reviews</div>

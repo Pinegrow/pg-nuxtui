@@ -1,5 +1,8 @@
 import { fileURLToPath, URL } from 'node:url'
-// import presetIcons from '@unocss/preset-icons'
+import { resolve } from 'pathe'
+import { addComponent } from 'nuxt/kit'
+import presetIcons from '@unocss/preset-icons'
+import { bundledLanguages } from 'shiki'
 
 import site from './site'
 const {
@@ -18,15 +21,20 @@ export default defineNuxtConfig({
     './app-nuxtui-layer', // NavBar and Footer components
   ],
   // ssr: false,
-  devtools: { enabled: false }, // Disable when using Vue devtools
+  // devtools: { enabled: false }, // enabled by default, disable when using standalone Vue devtools
 
   // Preparation for Nuxt 4 migration
-  srcDir: 'app',
-  serverDir: fileURLToPath(new URL('server', import.meta.url)),
-  dir: {
-    public: fileURLToPath(new URL('public', import.meta.url)),
-    modules: fileURLToPath(new URL('modules', import.meta.url)),
+  future: {
+    compatibilityVersion: 4,
   },
+
+  // Before Nuxt 4 migration
+  // srcDir: 'app',
+  // serverDir: fileURLToPath(new URL('server', import.meta.url)),
+  // dir: {
+  //   public: fileURLToPath(new URL('public', import.meta.url)),
+  //   modules: fileURLToPath(new URL('modules', import.meta.url)),
+  // },
 
   experimental: {
     componentIslands: true,
@@ -42,19 +50,25 @@ export default defineNuxtConfig({
 
   modules: [
     '@pinegrow/nuxt-module',
-    //@unocss/nuxt & @unocss/preset-icons is not required, as Nuxt UI already includes an UIcon component that uses egoist/tailwindcss-icons which also uses the same unocss format for icon names, for example, i-mdi-home.
-    '@nuxt/devtools',
+    '@unocss/nuxt',
     '@nuxt/content',
     '@vueuse/nuxt',
     '@pinia/nuxt',
     // '@nuxtjs/html-validator',
     '@nuxt/image',
     '@vee-validate/nuxt',
-    '@nuxtseo/module',
+    '@nuxtjs/seo',
     '@nuxtjs/fontaine',
     '@nuxtjs/critters',
     '@nuxt/ui',
-    'nuxt-icon',
+    '@nuxt/icon',
+    '@nuxt/eslint',
+    function () {
+      addComponent({
+        name: 'UIcon',
+        filePath: '@/components/BaseIcon.vue',
+      })
+    },
   ],
 
   colorMode: {
@@ -62,7 +76,7 @@ export default defineNuxtConfig({
   },
 
   ui: {
-    icons: 'all',
+    // icons: 'all',
     // safelistColors: [
     //   'primary',
     //   'secondary',
@@ -118,6 +132,7 @@ export default defineNuxtConfig({
     //   xxl: 1536,
     //   '2xl': 1536,
     // },
+    provider: 'ipx',
     presets: {
       avatar: {
         modifiers: {
@@ -127,9 +142,9 @@ export default defineNuxtConfig({
         },
       },
     },
-    netlify: {
-      baseURL: url,
-    },
+    // netlify: {
+    //   baseURL: url,
+    // },
     domains: [
       'images.unsplash.com',
       'fakestoreapi.com',
@@ -156,6 +171,13 @@ export default defineNuxtConfig({
   },
 
   content: {
+    // Before Nuxt 4 migration
+    sources: {
+      content: {
+        driver: 'fs',
+        base: resolve(__dirname, 'app/content'),
+      },
+    },
     markdown: {
       anchorLinks: false,
       rehypePlugins: [
@@ -170,22 +192,18 @@ export default defineNuxtConfig({
       ],
     },
     highlight: {
+      //@ts-ignore
+      langs: Object.keys(bundledLanguages),
       theme: 'dracula-soft',
     },
   },
 
   pinia: {
-    autoImports: [
-      // automatically imports `defineStore`
-      'defineStore', // import { defineStore } from 'pinia'
-      ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
-      'storeToRefs',
-      'acceptHMRUpdate',
-    ],
+    storesDirs: ['./stores/**'],
   },
 
   imports: {
-    dirs: ['stores'],
+    // dirs: ['my-components'],
   },
 
   vue: {
@@ -200,10 +218,10 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/hidden': { index: false },
+    '/hidden': { robots: false },
   },
 
-  // Used by all modules in the @nuxtseo/module collection
+  // Used by all modules in the @nuxtjs/seo collection
   // https://nuxtseo.com/nuxt-seo/guides/configuring-modules
   site: {
     url,
@@ -222,7 +240,7 @@ export default defineNuxtConfig({
   },
   sitemap: {
     // https://nuxtseo.com/sitemap/guides/i18n#debugging-hreflang
-    // Open https://the-ai-cafe.netlify.app/sitemap.xml
+    // Open {{site.url}}/sitemap.xml
     xslColumns: [
       { label: 'URL', width: '50%' },
       { label: 'Last Modified', select: 'sitemap:lastmod', width: '12.5%' },
@@ -240,16 +258,13 @@ export default defineNuxtConfig({
     strictNuxtContentPaths: true,
   },
   ogImage: {
-    // Open https://the-ai-cafe.netlify.app/__og_image__/og.png
-    // defaults: {
-    //   cacheTtl: 60 * 60 * 24 * 7, // 7 days
-    // },
+    // OG images and nuxtseo features can be previewed with nuxt-devtools during development. OG images can also be viewed using URL in this form - `/__og-image__/image/<path>/og.<extension>. For eg, {{site.url}}/__og-image__/image/og.png
+    // fonts: ['Inter:400', 'Inter:700'],
+    //
+    // defaults: { width: 1200, height: 600, emojis: 'noto', renderer: 'satori', component: 'NuxtSeo', cacheMaxAgeSeconds: 60 * 60 * 24 * 3 },
+    //
     // disable at a global level
     // runtimeCacheStorage: false,
-    // or
-    // defaults: {
-    //   cache: false,
-    // },
   },
   linkChecker: {
     enabled: false,
@@ -260,13 +275,28 @@ export default defineNuxtConfig({
     },
   },
 
-  // unocss: {
-  //   presets: [
-  //     presetIcons({
-  //       prefix: 'i-', // default prefix, do not change
-  //     }),
-  //   ],
-  // },
+  unocss: {
+    presets: [
+      presetIcons({
+        prefix: 'i-', // default prefix, do not change
+      }),
+    ],
+  },
+
+  eslint: {
+    // config: {
+    //   stylistic: {
+    //     // All are default values
+    //     semi: false,
+    //     quotes: 'single',
+    //     blockSpacing: true,
+    //     indent: 2,
+    //     commaDangle: 'always-multiline',
+    //     // ...
+    //   },
+    // },
+    // ...
+  },
 
   pinegrow: {
     liveDesigner: {

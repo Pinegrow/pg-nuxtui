@@ -106,7 +106,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ### Nuxt UI configuration
 
-- 👉 Nuxt UI uses heroicons by default and is configured only to use them. In order to use all iconsets in Vue Designer's icon-picker, the `ui` key of the Nuxt config has been updated (`icons: 'all'`).
+- 👉 Nuxt UI uses Heroicons by default and is configured exclusively for them. While all icon sets can be enabled, it is generally not recommended as it impacts performance during development. Therefore, this template overrides Nuxt UI's `UIcon` component with `BaseIcon` in the Nuxt config.
 - 👉 Nuxt UI by default uses `dark` mode. It's changed to `light` mode using `colorMode > preference` in `nuxt.config.ts`.
 - 👉 There are some scenarios when colors might have to be added to the `safelistColors` array under the `ui` key. For more details, refer to the official [documentation](https://ui.nuxt.com/getting-started/theming#colors).
 
@@ -117,6 +117,12 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
       '@pinegrow/nuxt-module',
       '@nuxt/ui',
       //...
+      function () {
+        addComponent({
+          name: 'UIcon',
+          filePath: '@/components/BaseIcon.vue',
+        })
+      },
     ],
     pinegrow: {
       liveDesigner: {
@@ -125,7 +131,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
       },
     },
     ui: {
-      icons: 'all',
+      // icons: 'all',
       // safelistColors: [
       //   'primary',
       //   'secondary',
@@ -145,7 +151,8 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ### Icons
 
-- [TailwindCSS Icons](https://github.com/egoist/tailwindcss-icons) - use over 100,000 open-source [Iconify](https://iconify.design/) icons. This is already part of Nuxt UI, so you just use UIcon component and icon props/slots of other components like UButton etc. Uses the **unocss** format for icon names, for example, `i-mdi-home`
+- [TailwindCSS Icons](https://github.com/egoist/tailwindcss-icons) - We use only the default Heroicons. For all other icon sets, we utilize them via UnoCSS Preset Icons, using the UnoCSS format for icon names, e.g., `i-mdi-home`.
+- [UnoCSS Preset Icons](https://github.com/unocss/unocss/tree/main/packages/preset-icons/) - use over 100,000 open-source [Iconify](https://iconify.design/) icons. Uses the **unocss** format for icon names, for example, `i-mdi-home`.
 
 ### Modules/Plugins
 
@@ -156,11 +163,11 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - [VeeValidate](https://vee-validate.logaretm.com/v4/integrations/nuxt/) takes care of value tracking, validation, errors, submissions and more.
 - [Nuxt Image](https://image.nuxt.com/) - Plug-and-play image optimization for Nuxt apps.
 - [Nuxt SEO](https://nuxtseo.com/) - Amazing collection of hand-crafted Nuxt Modules for all SEO needs with a unified site config. Includes `nuxt-site-config`, `nuxt-simple-robots`, `nuxt-simple-sitemap`, `nuxt-og-image`, `nuxt-link-checker`, `nuxt-seo-experiments`, `nuxt-schema-org`.
+  - OG images and nuxtseo features can be previewed with nuxt-devtools during development. OG images can also be viewed using URL in this form - `/__og-image__/image/<path>/og.<extension>`
 
 ### Devtools
 
 - [Nuxt Devtools](https://devtools.nuxtjs.org) - Enhance your DX (developer experience) with an amazing set of in-app features.
-  - **ACTION REQUIRED**: Currently deactivated. In `nuxt.config.ts`, uncomment module to activate.
 - [Vue Devtools](https://devtools.vuejs.org/guide/installation.html#standalone) - Official devtools that can be used as a standalone app alongside Vue Designer. It's configured as a Nuxt plugin (only during development).
   - **ACTION REQUIRED**: Currently deactivated. In `plugins/devtools.client.ts`, uncomment to activate.
 
@@ -174,7 +181,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 ### Coding Style
 
 - Use Composition API with [`<script setup>` SFC syntax](https://vuejs.org/guide/scaling-up/sfc.html)
-- [ESLint](https://eslint.org) with [@nuxt/eslint-config](https://github.com/nuxt/eslint-config) - opinionated not-so-strict set of linting rules.
+- [ESLint](https://eslint.org) with [@nuxt/eslint](https://eslint.nuxt.com/packages/module) Nuxt ESLint module that adopts ESLint 9 with a new flat config.
 - [Prettier](https://prettier.io) with [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) - format without conflicting with eslint rules.
 
 ### Typescript

@@ -14,14 +14,12 @@
           v-if="isDark"
           name="i-material-symbols-dark-mode-outline"
           class="text-2xl"
-        >
-        </UIcon>
+        />
         <UIcon
           v-else
           name="i-material-symbols-light-mode-outline"
           class="text-2xl"
-        >
-        </UIcon>
+        />
       </transition>
     </UButton>
   </div>

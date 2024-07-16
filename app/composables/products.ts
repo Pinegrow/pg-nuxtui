@@ -15,20 +15,19 @@ export const useProducts = async () => {
   }
 
   const fetchCategory = (category?: string) => {
-    // // Optimize any image urls in the data contents
-    // const { optimizeImage } = useOptimizeImage()
+    // Optimize any image urls in the data contents
+    const { optimizeImage } = useOptimizeImage()
 
-    return data.value.products.filter(
-      (product) => !category || product.category === category,
-    )
-    // .map((product) =>
-    //   product.image
-    //     ? {
-    //         ...product,
-    //         imageOptimized: optimizeImage(product.image),
-    //       }
-    //     : product,
-    // )
+    return data.value.products
+      .filter((product) => !category || product.category === category)
+      .map((product) =>
+        product.image
+          ? {
+              ...product,
+              imageOptimized: optimizeImage(product.image),
+            }
+          : product,
+      )
   }
 
   return { ...data, fetchCategory }

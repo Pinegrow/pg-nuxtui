@@ -1,6 +1,5 @@
 import type { Product, Products } from '~~/types/store'
-import { products } from './index'
-products as Products
+import { productData } from './index'
 
 const apiBaseUrl = 'https://fakestoreapi.com'
 
@@ -9,8 +8,8 @@ export default defineEventHandler(async (event): Promise<Product> => {
 
   let product: Maybe<Product>
 
-  if (products?.length) {
-    product = products.find((product) => +product.id === +id)
+  if (productData.products.length) {
+    product = productData.products.find((product) => +product.id === +id)
   }
 
   if (!product) {

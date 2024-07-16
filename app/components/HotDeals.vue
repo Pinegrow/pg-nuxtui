@@ -10,9 +10,11 @@
 <template>
   <div>
     <UContainer class="py-8">
-      <div class="-tracking-wide flex font-bold justify-center text-5xl">
+      <div
+        class="-tracking-wide flex font-bold items-center justify-center text-5xl"
+      >
         <span class="text-center text-primary">Hot Deals</span>
-        <UIcon name="i-twemoji-fire" class="ml-2"></UIcon>
+        <UIcon name="i-twemoji-fire" class="ml-2" width="28px" />
       </div>
       <section
         data-pg-name="Products"
