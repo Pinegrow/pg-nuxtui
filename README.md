@@ -100,7 +100,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - [Nuxt UI](https://ui.nuxt.com/getting-started) - Fully styled and customizable components for Nuxt. Under the hood:
   - 🦾 **[HeadlessUI-Vue](https://headlessui.com/vue/menu)** - Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.
   - ⚡ **[VueUse](https://vueuse.org/)** - collection of essential Vue composition utilities.
-  - 🔌 **[Nuxt Tailwind CSS Module](https://tailwindcss.nuxtjs.org/)** - This module helps you set up Tailwind CSS in your Nuxt application in seconds.
+  - 🔌 **[Nuxt Tailwind CSS](https://tailwindcss.nuxtjs.org/)** - The Tailwind CSS module for Nuxt lets you set up Tailwind CSS in your Nuxt application in seconds, with many goodies 🍬.
   - 🌗 **[Nuxt Color Mode](https://color-mode.nuxtjs.org/)** - Dark and Light mode with auto detection made easy with Nuxt.
   - 😃 **[Nuxt Icon](https://github.com/nuxt/icon)** - Use any icon (100,000+) from Iconify.
 
@@ -160,6 +160,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - [Pinegrow Tailwind CSS Plugin](https://www.npmjs.com/package/@pinegrow/tailwindcss-plugin) - via Design Panel, enables visual controls customization (automatic) and theme customization (optional).
 - [VueUse](https://vueuse.org/) - collection of essential Vue composition utilities.
 - 🍍 [Pinia](https://pinia.vuejs.org/ssr/nuxt.html) stores for global state management via the `@pinia/nuxt module`. Its light-weight, type-safe, extensible, modular with vue-devtools support.
+- [Nuxt Tailwind CSS](https://tailwindcss.nuxtjs.org/) - The Tailwind CSS module for Nuxt lets you set up Tailwind CSS in your Nuxt application in seconds, with many goodies 🍬.
 - [VeeValidate](https://vee-validate.logaretm.com/v4/integrations/nuxt/) takes care of value tracking, validation, errors, submissions and more.
 - [Nuxt Image](https://image.nuxt.com/) - Plug-and-play image optimization for Nuxt apps.
 - [Nuxt SEO](https://nuxtseo.com/) - Amazing collection of hand-crafted Nuxt Modules for all SEO needs with a unified site config. Includes `nuxt-site-config`, `nuxt-simple-robots`, `nuxt-simple-sitemap`, `nuxt-og-image`, `nuxt-link-checker`, `nuxt-seo-experiments`, `nuxt-schema-org`.
