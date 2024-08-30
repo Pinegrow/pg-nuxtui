@@ -42,7 +42,7 @@
     "@pinegrow/nuxt-module": "^3.0.60",
     "@pinegrow/nuxtui-plugin": "^3.0.35",
     "@pinegrow/tailwindcss-plugin": "^3.0.30",
-    "@resvg/resvg-js": "^2.6.2",
+    "@resvg/resvg-js": "^2.5.0",
     "@tailwindcss/forms": "^0.5.8",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^22.5.1",
