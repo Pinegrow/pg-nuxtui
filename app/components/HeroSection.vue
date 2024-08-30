@@ -17,7 +17,7 @@
         >
           <div class="px-4 text-center w-full md:w-8/12 xl:w-6/12">
             <h3
-              class="dark:text-secondary-200 font-bold font-serif mb-1 text-secondary-600 uppercase lg:capitalize"
+              class="dark:text-secondary-200 font-bold font-serif lg:capitalize mb-1 text-primary-600 uppercase"
             >
               New Arrivals, Big Savings!
             </h3>

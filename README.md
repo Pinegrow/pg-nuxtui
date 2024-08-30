@@ -32,10 +32,10 @@ npm install #or use pnpm
 
 (or)
 
-If you prefer a blank template (a single empty home page) instead,
+If you prefer a minimal template (a single empty home page) instead,
 
 ```bash
-npx giget@latest gh:pinegrow/pg-nuxtui#blank my-nuxtui-app #project-name
+npx giget@latest gh:pinegrow/pg-nuxtui#minimal my-nuxtui-app #project-name
 cd my-nuxtui-app
 npm install #or use pnpm
 ```
@@ -102,11 +102,11 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
   - ⚡ **[VueUse](https://vueuse.org/)** - collection of essential Vue composition utilities.
   - 🔌 **[Nuxt Tailwind CSS Module](https://tailwindcss.nuxtjs.org/)** - This module helps you set up Tailwind CSS in your Nuxt application in seconds.
   - 🌗 **[Nuxt Color Mode](https://color-mode.nuxtjs.org/)** - Dark and Light mode with auto detection made easy with Nuxt.
-  - 😃 **[TailwindCSS Icons](https://github.com/egoist/tailwindcss-icons)** - Use any icon (100,000+) from Iconify, for TailwindCSS.
+  - 😃 **[Nuxt Icon](https://github.com/nuxt/icon)** - Use any icon (100,000+) from Iconify.
 
 ### Nuxt UI configuration
 
-- 👉 Nuxt UI uses Heroicons by default and is configured exclusively for them. While all icon sets can be enabled, it is generally not recommended as it impacts performance during development. Therefore, this template overrides Nuxt UI's `UIcon` component with `BaseIcon` in the Nuxt config.
+- 👉 Nuxt UI uses Heroicons by default and is configured exclusively for them. This template overrides (in the Nuxt config) Nuxt UI's `UIcon` component with a local component `BaseIcon` that uses UnoCSS Preset-Icons which allows us to use any icons from the iconify icon-sets and is very efficient in terms of automatic treeshaking.
 - 👉 Nuxt UI by default uses `dark` mode. It's changed to `light` mode using `colorMode > preference` in `nuxt.config.ts`.
 - 👉 There are some scenarios when colors might have to be added to the `safelistColors` array under the `ui` key. For more details, refer to the official [documentation](https://ui.nuxt.com/getting-started/theming#colors).
 
@@ -121,6 +121,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
         addComponent({
           name: 'UIcon',
           filePath: '@/components/BaseIcon.vue',
+          priority: 100
         })
       },
     ],
@@ -131,7 +132,6 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
       },
     },
     ui: {
-      // icons: 'all',
       // safelistColors: [
       //   'primary',
       //   'secondary',
@@ -151,7 +151,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ### Icons
 
-- [TailwindCSS Icons](https://github.com/egoist/tailwindcss-icons) - We use only the default Heroicons. For all other icon sets, we utilize them via UnoCSS Preset Icons, using the UnoCSS format for icon names, e.g., `i-mdi-home`.
+- [Nuxt Icon](https://github.com/nuxt/icon) - We use only the default Heroicons. For all other icon sets, we utilize them via UnoCSS Preset Icons, using the UnoCSS format for icon names, e.g., `i-mdi-home`.
 - [UnoCSS Preset Icons](https://github.com/unocss/unocss/tree/main/packages/preset-icons/) - use over 100,000 open-source [Iconify](https://iconify.design/) icons. Uses the **unocss** format for icon names, for example, `i-mdi-home`.
 
 ### Modules/Plugins

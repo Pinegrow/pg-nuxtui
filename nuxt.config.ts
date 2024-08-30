@@ -40,6 +40,10 @@ export default defineNuxtConfig({
     componentIslands: true,
   },
 
+  // nitro: {
+  //   preset: 'netlify-static',
+  // },
+
   app: {
     baseURL: '/', // defaulted by nuxt
     // Look into HeadAndMeta.vue for the rest
@@ -58,15 +62,16 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vee-validate/nuxt',
     '@nuxtjs/seo',
-    '@nuxtjs/fontaine',
+    // '@nuxtjs/fontaine', // blocked by https://github.com/nuxt-modules/fontaine/issues/342
     '@nuxtjs/critters',
-    '@nuxt/ui',
-    '@nuxt/icon',
+    // '@nuxt/icon', // Pre-included by @nuxt/ui
     '@nuxt/eslint',
+    '@nuxt/ui',
     function () {
       addComponent({
         name: 'UIcon',
         filePath: '@/components/BaseIcon.vue',
+        priority: 100,
       })
     },
   ],
@@ -76,7 +81,6 @@ export default defineNuxtConfig({
   },
 
   ui: {
-    // icons: 'all',
     // safelistColors: [
     //   'primary',
     //   'secondary',
@@ -89,9 +93,10 @@ export default defineNuxtConfig({
   },
 
   // https://dev.to/jacobandrewsky/improving-performance-of-nuxt-with-fontaine-5dim
-  fontMetrics: {
-    fonts: ['Inter', 'Kalam'],
-  },
+  // blocked by https://github.com/nuxt-modules/fontaine/issues/342
+  // fontMetrics: {
+  //   fonts: ['Inter', 'Kalam'],
+  // },
 
   // https://dev.to/jacobandrewsky/optimizing-css-performance-in-nuxt-with-critters-4k8i
   critters: {
@@ -102,7 +107,14 @@ export default defineNuxtConfig({
     },
   },
 
-  // Vuetify's global styles
+  icon: {
+    componentName: 'NuxtIcon', // Instead of NuxtIcon, prefer using UIcon. Nuxt UI's UIcon is overridden with a local component `BaseIcon` that uses UnoCSS Preset-Icons which allows us to use any icons from the iconify iconsets and is very efficient in terms of automatic treeshaking.
+    serverBundle: {
+      collections: ['heroicons'],
+    },
+  },
+
+  // Global styles
   css: [
     '@/assets/css/tailwind.css',
     'lite-youtube-embed/src/lite-yt-embed.css',
@@ -132,7 +144,11 @@ export default defineNuxtConfig({
     //   xxl: 1536,
     //   '2xl': 1536,
     // },
-    provider: 'ipx',
+
+    // TODO: Currently image optimization is paused until some bugs in Nuxt Image modules are fixed
+    // provider: 'ipx',
+    provider: 'none',
+
     presets: {
       avatar: {
         modifiers: {
