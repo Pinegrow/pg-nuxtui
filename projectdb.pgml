@@ -23,7 +23,7 @@
             <dmdesignskill skill="fonts" family_1="Inter" family_2="Kalam"></dmdesignskill>
             <dmdesignskill skill="background" image_for_colors advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0" image="https://images.unsplash.com/photo-1506152983158-b4a74a01c721?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDF8fHNob3BwaW5nJTIwZmFzaGlvbnxlbnwwfHx8fDE3MjQ5ODE5MDB8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&fit=max" selector=".poster" keyword="shopping fashion"></dmdesignskill>
         </dmdesign>
-        <dmdesign>
+        <dmdesign active>
             <dmdesignskill skill="tw.colors" harmony="">
                 <dmcolor key="gray" color="rgba(107,114,128,1)" shade-50="rgba(249,250,251,1)" shade-100="rgba(243,244,246,1)" shade-200="rgba(229,231,235,1)" shade-300="rgba(209,213,219,1)" shade-400="rgba(156,163,175,1)" shade-500="rgba(107,114,128,1)" shade-600="rgba(75,85,99,1)" shade-700="rgba(55,65,81,1)" shade-800="rgba(31,41,55,1)" shade-900="rgba(17,24,39,1)"/>
                 <dmcolor key="red" color="rgba(239,68,68,1)" shade-50="rgba(254,242,242,1)" shade-100="rgba(254,226,226,1)" shade-200="rgba(254,202,202,1)" shade-300="rgba(252,165,165,1)" shade-400="rgba(248,113,113,1)" shade-500="rgba(239,68,68,1)" shade-600="rgba(220,38,38,1)" shade-700="rgba(185,28,28,1)" shade-800="rgba(153,27,27,1)" shade-900="rgba(127,29,29,1)"/>
@@ -44,7 +44,7 @@
             </dmdesignskill>
             <dmdesignskill skill="fonts" family_1="Inter" family_2="Kalam"></dmdesignskill>
             <dmdesignskill skill="background" image_for_colors advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0" image="https://images.unsplash.com/photo-1481437156560-3205f6a55735?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDQ0fHxzaG9wcGluZyUyMGZhc2hpb258ZW58MHx8fHwxNzI1MDAwODgzfDA&ixlib=rb-4.0.3&q=80&w=1080" selector=".poster" keyword="shopping fashion"></dmdesignskill>
-        </dmdesign><dmdesign active>
+        </dmdesign><dmdesign>
             <dmdesignskill skill="tw.colors" harmony="">
                 <dmcolor key="gray" color="rgba(107,114,128,1)" shade-50="rgba(249,250,251,1)" shade-100="rgba(243,244,246,1)" shade-200="rgba(229,231,235,1)" shade-300="rgba(209,213,219,1)" shade-400="rgba(156,163,175,1)" shade-500="rgba(107,114,128,1)" shade-600="rgba(75,85,99,1)" shade-700="rgba(55,65,81,1)" shade-800="rgba(31,41,55,1)" shade-900="rgba(17,24,39,1)"/>
                 <dmcolor key="red" color="rgba(239,68,68,1)" shade-50="rgba(254,242,242,1)" shade-100="rgba(254,226,226,1)" shade-200="rgba(254,202,202,1)" shade-300="rgba(252,165,165,1)" shade-400="rgba(248,113,113,1)" shade-500="rgba(239,68,68,1)" shade-600="rgba(220,38,38,1)" shade-700="rgba(185,28,28,1)" shade-800="rgba(153,27,27,1)" shade-900="rgba(127,29,29,1)"/>
@@ -67,5 +67,5 @@
             <dmdesignskill skill="background" image_for_colors advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0" image="https://images.unsplash.com/photo-1603400521630-9f2de124b33b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDE3NHx8ZmFzaGlvbiUyMGl0ZW1zfGVufDB8fHx8MTY5Njg3MjQ1NHww&ixlib=rb-4.0.3&q=80&w=1080" selector=".poster" keyword="shopping fashion"></dmdesignskill>
         </dmdesign>
         </dmdesigns>
-    <dmlocked tw-colors-gray="true" tw-colors-red="true" tw-colors-yellow="true" tw-colors-green="true" tw-colors-blue="true" tw-colors-indigo="true" tw-colors-purple="true" tw-colors-pink="true" tw-colors-error="true" tw-colors-neutral="true" tw-colors-success="true" tw-colors-warning="true" tw-colors-info="true" fonts-family_2="true" fonts-family_1="true" tw-colors-primary="true" tw-colors-secondary="true" tw-colors-tertiary="true"></dmlocked>
+    <dmlocked tw-colors-gray="true" tw-colors-red="true" tw-colors-yellow="true" tw-colors-green="true" tw-colors-blue="true" tw-colors-indigo="true" tw-colors-purple="true" tw-colors-pink="true" tw-colors-error="true" tw-colors-neutral="true" tw-colors-success="true" tw-colors-warning="true" tw-colors-info="true" fonts-family_2="true" fonts-family_1="true" tw-colors-primary="false" tw-colors-secondary="false" tw-colors-tertiary="false"></dmlocked>
 </project>
