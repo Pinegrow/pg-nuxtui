@@ -58,7 +58,7 @@
     <div class="flex flex-row h-full pl-6 py-6 w-full">
       <div class="flex flex-col w-1/2">
         <div data-pg-name="Logo" class="flex flex-row items-center">
-          <Icon :name="logo" size="72" class="mt-4" />
+          <NuxtIcon :name="logo" size="72" class="mt-4" />
           <span class="text-white font-extrabold ml-2 mt-4 p-4 text-6xl">
             {{ title }}
           </span>
@@ -75,7 +75,7 @@
           {{ summary }}
         </h5>
         <div v-if="twitter" class="flex flex-row items-center mt-auto">
-          <Icon name="logos:twitter" size="32" />
+          <NuxtIcon name="logos:twitter" size="32" />
           <span class="ml-3 text-2xl text-white">{{ twitter }}</span>
         </div>
       </div>
