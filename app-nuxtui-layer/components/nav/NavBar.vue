@@ -12,7 +12,15 @@
         style="grid-area: hamburger"
         class="sm:hidden"
       >
-        <NavHamburger @click="isMobileMenuOpen = true" />
+        <USlideover
+          v-model:open="isMobileMenuOpen"
+          data-pg-name="NavBarSecondary"
+          style="grid-area: primary-nav"
+          class="sm:hidden w-80"
+          side="left"
+          ><NavHamburger /><template #content>
+            <NavPrimary class="m-4" /> </template
+        ></USlideover>
       </div>
       <div
         data-pg-name="NavBarPrimary"
@@ -22,29 +30,20 @@
         <NavPrimary class="sm:w-full" />
       </div>
       <div data-pg-name="Searchbox" style="grid-area: search">
-        <UFormGroup hint="Optional">
+        <UFormField hint="Optional">
           <UInput
             placeholder="Search..."
             size="md"
             trailing-icon="i-material-symbols-search-rounded"
             class="w-full"
           />
-        </UFormGroup>
+        </UFormField>
       </div>
       <div data-pg-name="Profile" class="flex space-x-1">
         <ProfileActions class="!hidden sm:!flex" />
         <NavSecondary />
       </div>
     </div>
-    <USlideover
-      v-model="isMobileMenuOpen"
-      data-pg-name="NavBarSecondary"
-      style="grid-area: primary-nav"
-      class="w-80 sm:hidden"
-      side="left"
-    >
-      <NavPrimary class="m-4" />
-    </USlideover>
   </nav>
 </template>
 <style scoped>

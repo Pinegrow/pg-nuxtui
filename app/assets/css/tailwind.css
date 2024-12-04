@@ -1,6 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import '@nuxt/ui';
+@import '../../../themes/pg-tailwindcss/tokens.css';
+@import './custom.css';
+
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+/* @plugin "my-plugin" {
+  debug: false;
+  threshold: 0.5;
+  message: Hello world;
+  features: base, responsive;
+} */
+
+/* TODO: Only during development */
+@source "../../../_pginfo/**/*.{html,js}";
+@source "app/content/**/*.md";
 
 @layer components {
   .btn-blue {

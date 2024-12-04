@@ -12,12 +12,12 @@
       <transition name="slide" mode="out-in">
         <UIcon
           v-if="isDark"
-          name="i-material-symbols-dark-mode-outline"
+          name="material-symbols:dark-mode-outline"
           class="text-2xl"
         />
         <UIcon
           v-else
-          name="i-material-symbols-light-mode-outline"
+          name="material-symbols:light-mode-outline"
           class="text-2xl"
         />
       </transition>

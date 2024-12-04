@@ -18,7 +18,7 @@
   ]
 </script>
 <template>
-  <UDropdown
+  <UDropdownMenu
     :popper="{ placement: 'bottom-start' }"
     :ui="{
       container: '!-ml-2 sm:ml-auto',
@@ -40,6 +40,6 @@
         <UButton class="font-bold my-4 sm:my-2">Sign In / Join Us</UButton>
       </div>
     </template>
-  </UDropdown>
+  </UDropdownMenu>
 </template>
 <style scoped></style>

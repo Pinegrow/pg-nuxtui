@@ -4,7 +4,7 @@
 
   import site from '~~/site'
   // import image from '@/screenshots/image.jpg'
-  import { fontUrls } from '@/utils/font'
+  // import { fontUrls } from '@/utils/font'
 
   type TurboScript = Script & { once: true }
 
@@ -26,25 +26,25 @@
   ]
   const noscript: any = []
 
-  if (fontUrls.length) {
-    const googleapis = 'https://fonts.googleapis.com'
-    const gstatic = 'https://fonts.gstatic.com'
-    link.push(
-      { rel: 'dns-prefetch', href: googleapis },
-      { rel: 'dns-prefetch', href: gstatic },
-      { rel: 'preconnect', crossorigin: 'anonymous', href: googleapis },
-      { rel: 'preconnect', crossorigin: 'anonymous', href: gstatic },
-      {
-        rel: 'preload',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'",
-        href: fontUrls.toString(),
-      },
-    )
-    noscript.push(
-      `<link rel="stylesheet" crossorigin="anonymous" href="${fontUrls.toString()}" />`,
-    )
-  }
+  // if (fontUrls.length) {
+  //   const googleapis = 'https://fonts.googleapis.com'
+  //   const gstatic = 'https://fonts.gstatic.com'
+  //   link.push(
+  //     { rel: 'dns-prefetch', href: googleapis },
+  //     { rel: 'dns-prefetch', href: gstatic },
+  //     { rel: 'preconnect', crossorigin: 'anonymous', href: googleapis },
+  //     { rel: 'preconnect', crossorigin: 'anonymous', href: gstatic },
+  //     {
+  //       rel: 'preload',
+  //       as: 'style',
+  //       onload: "this.onload=null;this.rel='stylesheet'",
+  //       href: fontUrls.toString(),
+  //     },
+  //   )
+  //   noscript.push(
+  //     `<link rel="stylesheet" crossorigin="anonymous" href="${fontUrls.toString()}" />`,
+  //   )
+  // }
 
   const { name, description, author } = site
 

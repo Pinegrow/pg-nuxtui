@@ -1,9 +1,14 @@
+import { pg_colors } from '~~/themes/pg-tailwindcss/tokens.cjs'
+
 export default defineAppConfig({
   ui: {
-    gray: 'neutral',
-    primary: 'pp',
-    button: {
-      rounded: 'rounded-xl',
+    colors: {
+      primary: 'primary',
     },
+    // button: {
+    //   slots: {
+    //     base: 'font-bold'
+    //   }
+    // }
   },
 })

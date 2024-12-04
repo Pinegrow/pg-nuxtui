@@ -34,14 +34,14 @@
     "@nuxt/eslint": "^0.3.13",
     "@nuxt/icon": "^1.5.0",
     "@nuxt/image": "^1.8.0",
-    "@nuxt/ui": "^2.18.4",
+    "@nuxt/ui": "^3.0.0-alpha.8",
     "@nuxtjs/critters": "^0.7.2",
     "@nuxtjs/fontaine": "^0.4.3",
     "@nuxtjs/html-validator": "^1.8.2",
     "@nuxtjs/seo": "^2.0.0-rc.19",
-    "@pinegrow/nuxt-module": "^3.0.60",
-    "@pinegrow/nuxtui-plugin": "^3.0.37",
-    "@pinegrow/tailwindcss-plugin": "^3.0.30",
+    "@pinegrow/nuxt-module": "^3.0.65",
+    "@pinegrow/nuxtui-plugin": "^3.0.38",
+    "@pinegrow/tailwindcss-plugin": "^3.0.33",
     "@resvg/resvg-js": "^2.5.0",
     "@tailwindcss/forms": "^0.5.8",
     "@tailwindcss/typography": "^0.5.15",
@@ -54,20 +54,12 @@
     "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
     "npm-run-all": "^4.1.5",
-    "nuxt": "^3.13.0",
+    "nuxt": "^3.13.1",
     "postcss": "^8.4.41",
     "prettier": "^3.3.3",
     "rehype-external-links": "^3.0.0",
-    "tailwindcss": "^3.4.10",
+    "tailwindcss": "^4.0.0-alpha.34",
     "typescript": "^5.5.4"
-  },
-  "pnpm": {
-    "overrides": {
-      "nuxi": "3.8.4"
-    }
-  },
-  "overrides": {
-    "nuxi": "3.8.4"
   },
   "web-types": "web-types.json"
 }
