@@ -274,6 +274,9 @@ export default defineNuxtConfig({
     strictNuxtContentPaths: true,
   },
   ogImage: {
+    defaults: {
+      extension: 'jpeg',
+    },
     // OG images and nuxtseo features can be previewed with nuxt-devtools during development. OG images can also be viewed using URL in this form - `/__og-image__/image/<path>/og.<extension>. For eg, {{site.url}}/__og-image__/image/og.png
     // fonts: ['Inter:400', 'Inter:700'],
     //
