@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  const { navlinksSecondary } = useNav()
+  const { navlinksSecondary } = useNavMenu()
 
   const dropdownItems = [
     [

@@ -616,14 +616,16 @@
         "app_designer",
         "@vue/devtools",
         "project",
-        "vue",
         "nuxt",
         "@pinegrow/nuxt-module",
-        "@unocss/preset-icons",
+        "vue",
         "@nuxt/devtools",
+        "@unocss/preset-icons",
         "tw.flowbite",
         "@nuxt/ui",
-        "pg.html"
+        "tw",
+        "pg.html",
+        "pine.cone.lib"
       ]
     },
     "app-nuxtui-layer/components/TheLogo.vue": {
@@ -767,14 +769,16 @@
     "app_designer",
     "@vue/devtools",
     "project",
-    "vue",
     "nuxt",
     "@pinegrow/nuxt-module",
-    "@unocss/preset-icons",
+    "vue",
     "@nuxt/devtools",
+    "@unocss/preset-icons",
     "tw.flowbite",
     "@nuxt/ui",
-    "pg.html"
+    "tw",
+    "pg.html",
+    "pine.cone.lib"
   ],
   "urls": {
     "pages/index.vue": { "open-page-views": [{ "w": 1024, "h": 0 }] },
