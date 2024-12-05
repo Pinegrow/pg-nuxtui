@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  const { navlinksPrimary } = useNav()
+  const { navlinksPrimary } = useNavMenu()
   const { isMobileMenuOpen } = useMobileMenu()
 </script>
 <template>
