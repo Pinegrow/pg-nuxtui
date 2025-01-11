@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  const { navlinksPrimary } = useNavMenu()
+  const { navsPrimary } = useNavMenu()
   const { isMobileMenuOpen } = useMobileMenu()
 </script>
 <template>
@@ -8,17 +8,17 @@
   >
     <TheLogo class="mb-6 sm:hidden" />
     <ULink
-      v-for="(navlink, index) in navlinksPrimary"
+      v-for="(nav, index) in navsPrimary"
       :key="index"
-      :label="navlink.text"
-      :to="navlink.link"
+      :label="nav.title"
+      :to="nav.to"
       variant="link"
       class="hover:text-primary underline-offset-8"
       color="gray"
       active-class="text-primary underline"
       exact
       @click="isMobileMenuOpen = false"
-      >{{ navlink.text }}</ULink
+      >{{ nav.title }}</ULink
     >
   </div>
 </template>
