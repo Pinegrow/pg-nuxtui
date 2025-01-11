@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  const { navlinksSecondary } = useNavMenu()
+  const { navsSecondary } = useNavMenu()
 
   const dropdownItems = [
     [
@@ -7,11 +7,11 @@
         slot: 'account',
         disabled: true,
       },
-      ...navlinksSecondary.value.map((navlink) => ({
-        slot: navlink.link.replace(/^\//, '').replaceAll('/', '-'),
-        label: navlink.text,
-        icon: navlink.icon,
-        to: navlink.link,
+      ...navsSecondary.map((nav) => ({
+        slot: nav.to.replace(/^\//, '').replaceAll('/', '-'),
+        label: nav.title,
+        icon: nav.icon,
+        to: nav.to,
         activeClass: 'text-primary',
       })),
     ],

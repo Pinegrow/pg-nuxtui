@@ -4,7 +4,7 @@
     // name: 'track-order',
     // alias: 'track-order',
     title: 'Track Order',
-    description: `Track Your Order, Every Step of the Way!`,
+    description: 'Track Your Order, Every Step of the Way!',
     navOrder: '7',
     type: 'secondary',
     icon: 'i-mdi-home',

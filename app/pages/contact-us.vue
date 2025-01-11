@@ -4,7 +4,7 @@
     // name: 'contact-us',
     // alias: 'contact-us',
     title: 'Contact Us',
-    description: `Get in Touch: We're All Ears!`,
+    description: "Get in Touch: We're All Ears!",
     navOrder: '11',
     type: 'secondary',
     icon: 'i-mdi-home',

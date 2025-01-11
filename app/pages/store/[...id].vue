@@ -4,7 +4,7 @@
     name: 'store',
     // alias: '[...slug]',
     title: 'Store',
-    description: `Shop 'til You Drop: Your E-Commerce Haven!`,
+    description: "Shop 'til You Drop: Your E-Commerce Haven!",
     navOrder: '3',
     hidden: true,
     type: 'primary',

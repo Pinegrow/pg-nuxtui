@@ -4,7 +4,7 @@
     // name: 'returns',
     // alias: 'returns',
     title: 'Returns',
-    description: `Seamless Returns, Your Satisfaction Guaranteed!`,
+    description: 'Seamless Returns, Your Satisfaction Guaranteed!',
     navOrder: '9',
     type: 'secondary',
     icon: 'i-mdi-home',

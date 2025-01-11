@@ -4,7 +4,7 @@
     // name: 'help-faqs',
     // alias: 'help-faqs',
     title: 'Help & FAQs',
-    description: `We're Here to Help: Your Support Hub!`,
+    description: "We're Here to Help: Your Support Hub!",
     navOrder: '12',
     type: 'secondary',
     icon: 'i-mdi-home',
