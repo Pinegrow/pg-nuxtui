@@ -1,7 +1,7 @@
 import type { Product, Products } from '~~/types/store'
-import products from './data'
+import productsRaw from './data'
 
-products as Products
+const products: Product[] = productsRaw
 
 export default defineEventHandler(async (event): Promise<Product> => {
   const { id } = event.context.params

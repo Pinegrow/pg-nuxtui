@@ -10,6 +10,8 @@ export default {
   author: 'Pinegrow',
   url: 'https://pg-nuxtui.netlify.app',
   github: 'https://github.com/pinegrow/pg-nuxtui',
+  ogImageUrl: 'og-image.jpg', // absolute url (or) from public folder
+  generator: 'https://vuedesigner.com',
   defaultLocale: 'en', // default
   identity: {
     type: 'Organization',
@@ -17,6 +19,7 @@ export default {
   twitter: '@vuedesigner',
   trailingSlash: false, // default
   titleSeparator: '|', // default
+
   navs: {
     primary: [
       { title: 'Home', to: '/', icon: 'i-mdi-home' },
