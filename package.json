@@ -53,6 +53,7 @@
     "eslint-config-prettier": "^10.0.1",
     "npm-run-all": "^4.1.5",
     "nuxt": "^3.15.1",
+    "nuxt-icon": "^0.6.10",
     "postcss": "^8.5.0",
     "prettier": "^3.4.2",
     "rehype-external-links": "^3.0.0",
