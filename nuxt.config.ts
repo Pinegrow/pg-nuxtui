@@ -41,9 +41,9 @@ export default defineNuxtConfig({
     componentIslands: true,
   },
 
-  // nitro: {
-  //   preset: 'netlify-static',
-  // },
+  nitro: {
+    preset: 'netlify-static',
+  },
 
   app: {
     baseURL: '/', // defaulted by nuxt
