@@ -21,57 +21,13 @@ export default {
   titleSeparator: '|', // default
 
   navs: {
-    primary: [
-      { title: 'Home', to: '/', icon: 'i-mdi-home' },
-      { title: 'Women', to: '/women', icon: 'i-mdi-home' },
-      { title: 'Men', to: '/men', icon: 'i-mdi-home' },
-      {
-        title: 'Jewellery',
-        to: '/jewellery',
-        icon: 'i-mdi-home',
-      },
-      {
-        title: 'Electronics',
-        to: '/electronics',
-        icon: 'i-mdi-home',
-      },
-      {
-        title: 'About Us',
-        to: '/quick-start',
-        icon: 'i-mdi-home',
-      },
-    ],
+    primary: [{ title: 'Home', to: '/', icon: 'i-mdi-home' }],
     secondary: [
-      {
-        title: 'Track Order',
-        to: '/track-order',
-        icon: 'i-ic-outline-my-location',
-      },
-      {
-        title: 'Order History',
-        to: '/order-history',
-        icon: 'i-ic-baseline-history',
-      },
-      {
-        title: 'Returns',
-        to: '/returns',
-        icon: 'i-material-symbols-assignment-return-outline-rounded',
-      },
-      {
-        title: 'Delivery Policy',
-        to: '/delivery-policy',
-        icon: 'i-tabler-truck-return',
-      },
-      {
-        title: 'Contact Us',
-        to: '/contact-us',
-        icon: 'i-material-symbols-add-call',
-      },
-      {
-        title: 'Help & FAQs',
-        to: '/help-faqs',
-        icon: 'i-material-symbols-contact-support-outline',
-      },
+      // {
+      //   title: 'Subscribe',
+      //   icon: 'i-mdi-home',
+      //   to: '/subscribe',
+      // },
     ],
   },
 }
