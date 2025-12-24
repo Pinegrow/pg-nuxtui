@@ -2,7 +2,7 @@ import {
   pg_colors,
   pg_fonts,
   pg_backgrounds,
-} from './themes/pg-tailwindcss/tokens.cjs'
+} from './themes/pg-tailwindcss/tokens.mjs'
 
 import { getFontsWithFallback } from './app/utils/font'
 import { safelist } from './app/utils/colors'
